@@ -5,16 +5,16 @@ const Herosection = () => {
     <div className='heroWrapper'>
       <div className="heroPicContainer">
       <div className="heroPics heroPicture1">
-            <img src="../../../public/98c6f712-e5e4-494e-9f2e-b47c36ebbc4b.jpg" alt="" />
+            <img src="/98c6f712-e5e4-494e-9f2e-b47c36ebbc4b.jpg" alt="" />
           </div>
           <div className="heroPics heroPicture2">
-            <img src="../../../public/cfb37e23-c9f3-499f-875a-ca847843dcb6.jpg" alt="" />
+            <img src="/cfb37e23-c9f3-499f-875a-ca847843dcb6.jpg" alt="" />
           </div> 
           <div className="heroPics heroPicture3">
-            <img src="../../../public/Semi-Wide Loose Pants – DAXUEN.jpg" alt="" />
+            <img src="/Semi-Wide Loose Pants – DAXUEN.jpg" alt="" />
           </div>
           <div className="heroPics heroPicture4">
-            <img src="../../../public/Women’s Canvas Tote in 4 Colors Lining texture….jpg" alt="" />
+            <img src="/Women’s Canvas Tote in 4 Colors Lining texture….jpg" alt="" />
           </div>
       </div>
       <div className="textContainer">

@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav className="navbar w-100">
             <div className="container-fluid d-flex justify-content-between align-items-center">
                 <Link className="" id='logoContainer' to="/">
-                <img id='logo' src="../../public/Dolu's logo.jpg" alt="LOGO"/>
+                <img id='logo' src="/Dolu's logo.jpg" alt="LOGO"/>
                 </Link>
                 <div className="input-group">
                     <span className='input-group-text'><i class="bi bi-search"></i></span>

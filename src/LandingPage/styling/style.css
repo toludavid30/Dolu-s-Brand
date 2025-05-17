@@ -34,7 +34,7 @@
     place-content: center;
         .typefaceContainer{
             font-size: 9rem;
-            background-image: url('../../../public/WhatsApp\ Image\ 2025-05-07\ at\ 9.08.40\ AM.jpeg');
+            background-image: url('/WhatsApp\ Image\ 2025-05-07\ at\ 9.08.40\ AM.jpeg');
             background-position: center;
             background-size: cover;
             background-clip: text;
