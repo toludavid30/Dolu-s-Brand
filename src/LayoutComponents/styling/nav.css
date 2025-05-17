@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    color: black;
+    height: 15dvh;
+
+    #logoContainer{
+        height: 90%;
+        width: 18%;
+        #logo{
+            height: auto;
+            width: 100%;
+    
+        }
+    }
+    .input-group{
+        width: 40%;
+    }
+    .navRight{
+        width: 20%;
+        height: 100%;
+        ul{
+            list-style: none;
+        }
+    }
+}
