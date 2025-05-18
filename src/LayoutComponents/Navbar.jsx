@@ -6,8 +6,8 @@ const Navbar = () => {
   const [cartFilled, setCartFilled] = useState(false)
   return (
     <div>
-        <nav className="navbar w-100">
-            <div className="container-fluid d-flex justify-content-between align-items-center">
+        <nav className="container-fluid" id='navbar'>
+            <div className="w-100 d-flex justify-content-between align-items-center">
                 <Link className="" id='logoContainer' to="/">
                 <img id='logo' src="/Dolu's logo.jpg" alt="LOGO"/>
                 </Link>
@@ -16,7 +16,7 @@ const Navbar = () => {
                     <input type="text" className='border form-control'/>
                 </div>
                 <div className="navRight">
-                    <ul className="w-100 h-100 d-flex justify-content-around align-items-center">
+                    <ul className="w-100 justify-content-around h-100 d-flex align-items-center">
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
