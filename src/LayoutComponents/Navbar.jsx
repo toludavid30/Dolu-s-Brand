@@ -12,7 +12,7 @@ const Navbar = () => {
                 <img id='logo' src="/Dolu's logo.jpg" alt="LOGO"/>
                 </Link>
                 <div className="input-group">
-                    <span className='input-group-text'><i class="bi bi-search"></i></span>
+                    <span className='input-group-text'><i className="bi bi-search"></i></span>
                     <input type="text" className='border form-control'/>
                 </div>
                 <div className="navRight">
