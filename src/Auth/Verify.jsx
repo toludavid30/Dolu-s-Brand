@@ -22,7 +22,7 @@ const Verify = () => {
     },[])
 
   return (
-    <div>Verify</div>
+    <div>Verify Email</div>
   )
 }
 

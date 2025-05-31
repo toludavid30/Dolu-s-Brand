@@ -14,9 +14,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<LandingPage/>}/>
       <Route path='/verify/:token' element={<Verify/>} />
-      
-      {/* <Route path='/about' element={<About/>}/> */}
-      {/* <Route path='/contact' element={<Contact/>}/> */}
+
     </Routes>
     </BrowserRouter>
     </>
