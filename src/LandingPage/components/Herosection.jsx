@@ -102,7 +102,7 @@ const Herosection = () => {
         <h1 className="typefaceContainer">
           DOLÚ
         </h1>
-        <p className='text-center fs-6'>
+        <p className='text-center fs-6 fst-italic'>
           luxury made for elegance ...
         </p>
       </div>

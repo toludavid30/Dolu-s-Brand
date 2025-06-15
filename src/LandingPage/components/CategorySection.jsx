@@ -23,7 +23,7 @@ const CategorySection = () => {
             />
               </div>
             </div>
-           <div className="categoryListWrap pt-5 ">
+           <div className="categoryListWrap pt-4 pt-md-5">
             <ul className='d-flex flex-column gap-3'>
               <li>
                 <button class="btn-53">

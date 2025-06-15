@@ -24,7 +24,11 @@
         width: 25%;
         height: 100%;
         ul{
+            margin: 0;
+            height: 100%;
             list-style: none;
         }
     }
 }
+
+
