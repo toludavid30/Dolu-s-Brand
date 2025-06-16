@@ -26,13 +26,13 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item h-100">
                             <Link className="nav-link" to="/cart">
-                              <span className='fs-4 h-100'>
+                              <span className='fs-5 fs-md-4 cartIcon h-100'>
                                 {cartFilled ? <i className="bi bi-cart"></i> : <i className="bi bi-cart-check-fill"></i>}
                               </span>
                             </Link>
                         </li>
                         <button
-                        className="h-100 dropdown navbar-toggler d-md-none fs-4"
+                        className="h-100 dropdown navbar-toggler d-md-none fs-5"
                         type="button"
                         aria-label="Toggle navigation"
                         style={{
