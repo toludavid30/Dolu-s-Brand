@@ -52,5 +52,22 @@
         }
     }
 }
-
+@media (max-width: 400px){
+    #navbar{
+        height: 7dvh;
+        #logoContainer{
+            width: 30%;
+            #logo{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .input-group{
+            width: 38%;
+        }
+        .navRight{
+            width: 25%;
+        }
+    }
+}
 
