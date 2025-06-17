@@ -4,7 +4,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 const CategorySection = () => {
   return (
     <div id='categorySection' className='categorySection'>
-        <div className='categoryWrap pt-5'>
+        <div className='categoryWrap pt-4 pt-md-5 w-100'>
 
         <div class="e-card playing">
               <div class="image"></div>
