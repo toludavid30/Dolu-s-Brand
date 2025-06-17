@@ -109,12 +109,12 @@
             }
             .heroPics{
                 width: 30%;
-                height: 8.8vh;
+                height: 9vh;
                 img{
                 width: 80%;
                 height: 100%;
                 object-fit: cover;
-                object-position: 70% 50%;
+                object-position: 70% 70%;
                 /* border-radius: 90%;
                 box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); */
             }
@@ -132,7 +132,7 @@
         }
     }
     #categorySection{
-        height: 60d vh;
+        height: 60dvh;
         .categoryWrap{
             .categoryListWrap{
                 width: 80%;
