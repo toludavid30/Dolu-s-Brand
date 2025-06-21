@@ -19,12 +19,12 @@ const CategorySection = () => {
               src="https://lottie.host/0e62646c-1cc8-493d-b931-980059ab85a5/abZAKsWrr0.lottie"
               loop
               autoplay
-              style={{ width: '90%', height: '90%'}}
+              style={{ width: '100%', height: '90%'}}
             />
               </div>
             </div>
            <div className="categoryListWrap pt-4 pt-md-5">
-            <ul className='d-flex flex-column gap-3'>
+            <ul className='h-100 d-flex flex-column gap-3'>
               <li>
                 <button class="btn-53">
                   <div class="original">NATIVE WEARS</div>

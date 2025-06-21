@@ -80,7 +80,7 @@ const Herosection = () => {
     }
   return (
     <div className='heroWrapper container'>
-      <div className="heroPicContainer gap-0 gap-md-2 d-grid">
+      <div className="heroPicContainer gap-md-2 d-grid">
         <div className="topPicWrapper row d-flex w-100 justify-content-around">
           <div className="heroPics heroPicture1">
               <img src="/98c6f712-e5e4-494e-9f2e-b47c36ebbc4b.jpg" alt="" />
