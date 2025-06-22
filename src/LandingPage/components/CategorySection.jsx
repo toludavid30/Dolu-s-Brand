@@ -19,7 +19,7 @@ const CategorySection = () => {
               src="https://lottie.host/0e62646c-1cc8-493d-b931-980059ab85a5/abZAKsWrr0.lottie"
               loop
               autoplay
-              style={{ width: '100%', height: '90%'}}
+              style={{ width: '100%', height: '95%'}}
             />
               </div>
             </div>
