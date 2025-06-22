@@ -83,18 +83,18 @@ const Herosection = () => {
       <div className="heroPicContainer gap-md-2 d-grid">
         <div className="topPicWrapper row d-flex w-100 justify-content-around">
           <div className="heroPics heroPicture1">
-              <img src="/98c6f712-e5e4-494e-9f2e-b47c36ebbc4b.jpg" alt="" />
+              <img src="/Shirt-Pant.jpeg" alt="" />
             </div>
             <div className="heroPics heroPicture2">
-              <img src="/cfb37e23-c9f3-499f-875a-ca847843dcb6.jpg" alt="" />
+              <img src="/NPant-cross.jpeg" alt="" />
             </div>
         </div>
-        <div className="bottomPicWrapper row d-flex justify-content-between">
+        <div className="bottomPicWrapper d-flex justify-content-between">
           <div className="heroPics heroPicture3">
-              <img src="/Semi-Wide Loose Pants – DAXUEN.jpg" alt="" />
+              <img src="/Cargo-Tote.jpeg" alt="" />
             </div>
             <div className="heroPics heroPicture4">
-              <img src="/Women’s Canvas Tote in 4 Colors Lining texture….jpg" alt="" />
+              <img src="/cargo-cross.jpeg" alt="" />
             </div>
         </div> 
       </div>

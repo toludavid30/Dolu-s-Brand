@@ -34,6 +34,25 @@
     }
 }
 
+@media (min-width: 500px) and (max-width: 900px){
+    #navbar{
+        height: 8dvh;
+        #logoContainer{
+            width: 32%;
+            #logo{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .input-group{
+            width: 40%;
+        }
+        .navRight{
+            width: 22%;
+        }
+    }
+}
+
 @media (max-width: 470px){
     #navbar{
         height: 7dvh;
