@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#AuthWrapper{
+    background-image: url("/category\ bg.png"), url("/Dolu\'s\ logo.jpg");
+    background-position: center;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-blend-mode: multiply;
+    min-height: 90dvh;
+}
+* .card-wrapper {
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 0 !important;
+  color: black;
+}
+* .card-wrapper .headWrap {
+  border-radius: 0% 10% 38% 38%/10% 0% 40% 40%;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background-color: #C54B8C;
+}
+* .card-wrapper .headWrap h4 {
+  font-family: oswald;
+}
+* .card-wrapper .headWrap p {
+  font-size: smaller;
+}
+* .card-wrapper .headWrap p a {
+  color: #CCCCCC;
+}
+* .card-wrapper form .btn {
+  background-color: #C54B8C;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: oswald;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+* .card-wrapper form .btn:hover {
+  background-color: black;
+  color: #CCCCCC;
+}
+
+* .form-group{
+  p{
+    font-size: smaller !important;
+  }
+}
+
+@media (min-width:340px) and (max-width: 600px) {
+    *{
+        font-size: small;
+    }
+    * .card-wrapper .headWrap h4 {
+        font-family: oswald;
+        font-size: 3.0rem;
+    }
+    * .card-wrapper .headWrap p {
+        font-size: xx-small;
+        display: flex;
+        flex-direction: column;
+        span{
+            font-size: 10px;
+        }
+        a{
+            font-size: 10px;
+        }
+    }
+}

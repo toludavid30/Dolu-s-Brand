@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 const Verify = () => {
     const {token} = useParams()
-    const baseUrl = "https://noderender-dm5d.onrender.com/auth/verify"
+    const baseUrl = "https://noderender-i690.onrender.com/auth/verify"
 
     const handleVerify =async () =>{
         const res = await fetch(baseUrl, {
