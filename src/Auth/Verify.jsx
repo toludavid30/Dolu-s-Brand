@@ -6,6 +6,7 @@ const Verify = () => {
     const baseUrl = "https://noderender-i690.onrender.com/auth/verify"
 
     const handleVerify =async () =>{
+        
         const res = await fetch(baseUrl, {
             method: "POST",
             body: JSON.stringify({token}),
@@ -15,6 +16,7 @@ const Verify = () => {
         })
         const data = await res.json()
         console.log(data);
+        console.log({token});
         
     }
     useEffect(()=>{

@@ -6,15 +6,15 @@ const CategorySection = () => {
     <div id='categorySection' className='categorySection'>
         <div className='categoryWrap pt-4 pt-md-5 w-100'>
 
-        <div class="e-card playing">
-              <div class="image"></div>
+        <div className="e-card playing">
+              <div className="image"></div>
               
-              <div class="wave"></div>
-              <div class="wave"></div>
-              <div class="wave"></div>
+              <div className="wave"></div>
+              <div className="wave"></div>
+              <div className="wave"></div>
               
 
-              <div class="infotop">
+              <div className="infotop">
               <DotLottieReact
               src="https://lottie.host/0e62646c-1cc8-493d-b931-980059ab85a5/abZAKsWrr0.lottie"
               loop
@@ -26,9 +26,9 @@ const CategorySection = () => {
            <div className="categoryListWrap pt-4 pt-md-5">
             <ul className='h-100 d-flex flex-column gap-3'>
               <li>
-                <button class="btn-53">
-                  <div class="original">NATIVE WEARS</div>
-                  <div class="letters">
+                <button className="btn-53">
+                  <div className="original">NATIVE WEARS</div>
+                  <div className="letters">
                     <span>N</span>
                     <span>A</span>
                     <span>T</span>
@@ -45,9 +45,9 @@ const CategorySection = () => {
                 </button>
               </li>
               <li>
-              <button class="btn-53">
-                  <div class="original">SHIRTS</div>
-                  <div class="letters">
+              <button className="btn-53">
+                  <div className="original">SHIRTS</div>
+                  <div className="letters">
                     
                     <span>S</span>
                     <span>H</span>
@@ -57,9 +57,9 @@ const CategorySection = () => {
                     <span>S</span>
                   </div>
                 </button>
-                <button class="btn-53">
-                  <div class="original">PANTS</div>
-                  <div class="letters">
+                <button className="btn-53">
+                  <div className="original">PANTS</div>
+                  <div className="letters">
                     
                     <span>P</span>
                     <span>A</span>
@@ -70,9 +70,9 @@ const CategorySection = () => {
                 </button>
               </li>
               <li>
-              <button class="btn-53">
-                  <div class="original">CARGO PANTS</div>
-                  <div class="letters">
+              <button className="btn-53">
+                  <div className="original">CARGO PANTS</div>
+                  <div className="letters">
                     
                     <span>C</span>
                     <span>A</span>
@@ -87,9 +87,9 @@ const CategorySection = () => {
                     <span>S</span>
                   </div>
                 </button>
-                <button class="btn-53">
-                  <div class="original">TOTE BAGS</div>
-                  <div class="letters">
+                <button className="btn-53">
+                  <div className="original">TOTE BAGS</div>
+                  <div className="letters">
                     
                     <span>T</span>
                     <span>O</span>
@@ -102,9 +102,9 @@ const CategorySection = () => {
                     <span>S</span>
                   </div>
                 </button>
-                <button class="btn-53">
-                  <div class="original">CROSS BAGS</div>
-                  <div class="letters">
+                <button className="btn-53">
+                  <div className="original">CROSS BAGS</div>
+                  <div className="letters">
                     
                     <span>C</span>
                     <span>R</span>

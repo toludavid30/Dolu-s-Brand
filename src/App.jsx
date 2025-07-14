@@ -6,12 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Verify from './Auth/Verify';
 import Auth from './Auth/Auth';
 import NotFound from './NotFound';
+import CartProvider from './context/CartContext/CartProvider';
 
 
 const App = () => {
   return (
     <>
     <BrowserRouter>
+    <CartProvider>
     <Navbar/>
     <Routes>
       <Route path='/' element={<LandingPage/>}/>
@@ -19,6 +21,7 @@ const App = () => {
       <Route path='/verify/:token' element={<Verify/>} />
       <Route path='*' element={<NotFound/>}/>
     </Routes>
+    </CartProvider>
     </BrowserRouter>
     </>
   )
