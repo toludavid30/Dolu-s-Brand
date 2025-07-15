@@ -68,6 +68,9 @@
                     justify-content: space-evenly;
                     height: 15%;
                     font-size: 0.5rem;
+                    .original{
+                        font-size: 0.7rem;
+                    }
                     /* width: 20%; */
                 }
             }
@@ -105,7 +108,7 @@
   }
 
   #TopProductSection{
-    height: 65dvh;
+    height: 55dvh;
         .sectionTitle{
             height: 7%;
             }
@@ -249,7 +252,7 @@
   }
 
   #TopProductSection{
-    height: 65dvh;
+    height: 55dvh;
         .sectionTitle{
             height: 7%;
             }
@@ -388,7 +391,7 @@
   }
 
   #TopProductSection{
-    height: 65dvh;
+    height: 60dvh;
         .sectionTitle{
             height: 7%;
             }

@@ -49,6 +49,12 @@
         }
         .navRight{
             width: 22%;
+            .nav-link{
+                display: none !important;
+            }
+            .dropdown{
+                display: block !important;
+            }
         }
     }
 }

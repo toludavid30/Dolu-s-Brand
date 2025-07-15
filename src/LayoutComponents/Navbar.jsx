@@ -24,6 +24,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link d-none d-md-block" to="/contact">Contact Us</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link d-none d-md-block" to="/auth">Sign Up</Link>
+                        </li>
                         <li className="nav-item h-100">
                             <Link className="nav-link" to="/cart">
                               <span className='fs-5 fs-md-4 cartIcon h-100'>
@@ -47,8 +50,9 @@ const Navbar = () => {
                             <i className="bi bi-list"></i>
                         </span>
                         <ul className="dropdown-menu h-auto">
-                            <li><a className="dropdown-item" href="#">About</a></li>
-                            <li><a className="dropdown-item" href="#">Contact Us</a></li>
+                            <li><a className="dropdown-item" href="/about">About</a></li>
+                            <li><a className="dropdown-item" href="/Contact">Contact Us</a></li>
+                            <li><a className="dropdown-item" href="/auth">Sign Up</a></li>
                         </ul>
                         </button>
                     </ul>
