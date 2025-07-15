@@ -19,6 +19,9 @@
     }
     .input-group{
         width: 40%;
+        input{
+            outline: none !important;
+        }
     }
     .navRight{
         width: 25%;
@@ -33,6 +36,8 @@
         }
     }
 }
+
+
 
 @media (min-width: 500px) and (max-width: 900px){
     #navbar{

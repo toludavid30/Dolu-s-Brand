@@ -17,7 +17,7 @@ const TopProductSection = () => {
                         Name: Cargo + Crossbag
                     </h6>
                     <p className='card-text'>
-                        Price: 20,000 NGN
+                        Price: 23,499 NGN
                     </p>
                     <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("11-22")}>Add to Cart</button>
                 </div>
@@ -29,7 +29,7 @@ const TopProductSection = () => {
                         Name: Custom Native Wear
                     </h6>
                     <p className='card-text'>
-                        Price: 15,000 NGN
+                        Price: 44,999 NGN
                     </p>
                     <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("33")}>Add to Cart</button>
                 </div>
@@ -41,7 +41,7 @@ const TopProductSection = () => {
                         Name: Custom Tote Bag
                     </h6>
                     <p className='card-text'>
-                        Price: 5,000 NGN
+                        Price: 6,999 NGN
                     </p>
                     <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("44")}>Add to Cart</button>
                 </div>

@@ -5,6 +5,27 @@ import './styling/nav.css'
 const Navbar = () => {
   const [cartFilled, setCartFilled] = useState(false)
 
+  const search = async() =>{
+    const searchInput = document.getElementById("searchInput").value
+    if (searchInput){
+        try {
+            const res = await fetch("http://localhost:5005/product/search", {
+                method: "POST",
+                body: JSON.stringify({keyword: searchInput}),
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            })
+            const data = await res.json()
+            console.log(data);
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+  }
+
   return (
     <div>
         <nav className="container-fluid" id='navbar'>
@@ -14,7 +35,7 @@ const Navbar = () => {
                 </Link>
                 <div className="input-group h-100 py-3">
                     <span className='input-group-text'><i className="bi bi-search"></i></span>
-                    <input type="text" className='border form-control'/>
+                    <input id='searchInput' type="text" className='border form-control' onChange={search}/>
                 </div>
                 <div className="navRight h-100">
                     <ul className="w-100 h-100 navRightWrap justify-content-around  d-flex align-items-center">
