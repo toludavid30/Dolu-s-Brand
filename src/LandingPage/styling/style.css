@@ -309,11 +309,24 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
     .sectionTitle{
       height: 10%;
     }
     .sectionWrapper{
-      height: 70%;
+      height: 90%;
+      .cardWrapper{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img{
+          height: 65%;
+        }
+        .cardText{
+          height: 30%;
+        }
+      }
     }
 }
 

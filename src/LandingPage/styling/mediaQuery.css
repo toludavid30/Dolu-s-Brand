@@ -104,6 +104,39 @@
     }
   }
 
+  #TopProductSection{
+    height: 65dvh;
+        .sectionTitle{
+            height: 7%;
+            }
+        .sectionWrapper{
+                height: 80%;
+                .cardWrapper{
+                    height: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    /* justify-content: space-between; */
+                    img{
+                    height: 50%;
+                    }
+                    .cardText{
+                    height: 30%;
+                    h6{
+                    font-size: x-small;
+                    }
+                    p{
+                    font-size: x-small;
+                    }
+                    button{
+                    font-size: x-small;
+                    }
+                    }
+                }
+    }
+
+  }
+
+
 }
 
 @media (max-width: 400px) {
@@ -215,6 +248,38 @@
     }
   }
 
+  #TopProductSection{
+    height: 65dvh;
+        .sectionTitle{
+            height: 7%;
+            }
+        .sectionWrapper{
+                height: 80%;
+                .cardWrapper{
+                    height: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    /* justify-content: space-between; */
+                    img{
+                    height: 45%;
+                    }
+                    .cardText{
+                    height: 45%;
+                    h6{
+                    font-size: x-small;
+                    }
+                    p{
+                    font-size: x-small;
+                    }
+                    button{
+                    font-size: x-small;
+                    }
+                    }
+                }
+    }
+
+  }
+
 }
 
 @media (min-width:500px) and (max-width: 800px)  {
@@ -320,6 +385,29 @@
         color: rgb(255, 255, 255);
         font-weight: 600;
     }
+  }
+
+  #TopProductSection{
+    height: 65dvh;
+        .sectionTitle{
+            height: 7%;
+            }
+        .sectionWrapper{
+                height: 75%;
+                .cardWrapper{
+                    height: 95%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    img{
+                    height: 60%;
+                    }
+                    .cardText{
+                    height: 30%;
+                    }
+                }
+    }
+
   }
 
 }

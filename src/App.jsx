@@ -7,6 +7,8 @@ import Verify from './Auth/Verify';
 import Auth from './Auth/Auth';
 import NotFound from './NotFound';
 import CartProvider from './context/CartContext/CartProvider';
+import About from './About/About';
+import Contact from './Contact/Contact';
 
 
 const App = () => {
@@ -19,6 +21,8 @@ const App = () => {
       <Route path='/' element={<LandingPage/>}/>
       <Route path='/auth' element={<Auth/>}/>
       <Route path='/verify/:token' element={<Verify/>} />
+      <Route path='/about' element={<About/>}/>
+      <Route path='/contact' element={<Contact/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     </CartProvider>
