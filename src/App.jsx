@@ -9,6 +9,7 @@ import NotFound from './NotFound';
 import CartProvider from './context/CartContext/CartProvider';
 import About from './About/About';
 import Contact from './Contact/Contact';
+import Footer from './LayoutComponents/Footer';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
+    <Footer/>
     </CartProvider>
     </BrowserRouter>
     </>

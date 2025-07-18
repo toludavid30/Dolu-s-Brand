@@ -335,12 +335,11 @@
 
 #ProductsSection{
   height: auto;
-  font-family: Noto Sans Japanese, sans-serif;
 
   .cardWrapper{
     height: 65dvh;
     width: 21%;
-    
+
     img{
       height: 60%;
       width: 100%;

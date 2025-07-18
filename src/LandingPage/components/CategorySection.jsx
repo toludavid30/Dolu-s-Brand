@@ -26,7 +26,7 @@ const CategorySection = () => {
            <div className="categoryListWrap pt-4 pt-md-5">
             <ul className='h-100 d-flex flex-column gap-3'>
               <li>
-                <button className="btn-53">
+                <a href ="#NativeSection" className="btn-53" >
                   <div className="original">NATIVE WEARS</div>
                   <div className="letters">
                     <span>N</span>
@@ -42,10 +42,10 @@ const CategorySection = () => {
                     <span>R</span>
                     <span>S</span>
                   </div>
-                </button>
+                </a> 
               </li>
               <li>
-              <button className="btn-53">
+              <a href='#ShirtSection' className="btn-53">
                   <div className="original">SHIRTS</div>
                   <div className="letters">
                     
@@ -56,8 +56,8 @@ const CategorySection = () => {
                     <span>T</span>
                     <span>S</span>
                   </div>
-                </button>
-                <button className="btn-53">
+                </a>
+                <a href='#PantsSection' className="btn-53">
                   <div className="original">PANTS</div>
                   <div className="letters">
                     
@@ -67,10 +67,10 @@ const CategorySection = () => {
                     <span>T</span>
                     <span>S</span>
                   </div>
-                </button>
+                </a>
               </li>
               <li>
-              <button className="btn-53">
+              <a href='#CargoSection' className="btn-53">
                   <div className="original">CARGO PANTS</div>
                   <div className="letters">
                     
@@ -86,8 +86,8 @@ const CategorySection = () => {
                     <span>T</span>
                     <span>S</span>
                   </div>
-                </button>
-                <button className="btn-53">
+                </a>
+                <a href='#ToteSection' className="btn-53">
                   <div className="original">TOTE BAGS</div>
                   <div className="letters">
                     
@@ -101,8 +101,8 @@ const CategorySection = () => {
                     <span>G</span>
                     <span>S</span>
                   </div>
-                </button>
-                <button className="btn-53">
+                </a>
+                <a href='#CrossSection' className="btn-53">
                   <div className="original">CROSS BAGS</div>
                   <div className="letters">
                     
@@ -117,7 +117,7 @@ const CategorySection = () => {
                     <span>G</span>
                     <span>S</span>
                   </div>
-                </button>
+                </a>
               </li>
             </ul>
            </div>

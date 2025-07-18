@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Noto Sans Japanese, sans-serif;
 }
 #AuthWrapper{
     background-image: url("/category\ bg.png"), url("/Dolu\'s\ logo.jpg");
@@ -62,9 +63,12 @@
     *{
         font-size: small;
     }
+    * .card-wrapper{
+      width: 75% !important;
+    }
     * .card-wrapper .headWrap h4 {
         font-family: oswald;
-        font-size: 3.0rem;
+        font-size: 2.4rem;
     }
     * .card-wrapper .headWrap p {
         font-size: xx-small;

@@ -134,9 +134,9 @@ const Products = () => {
         getCrossProducts()
     },[])
   return (
-    <div id='ProductsSection' className='py-4 container'>
+    <div id='ProductsSection' className='py-5 container'>
         <h2 className='sectionTitle text-center fw-bold'>Products</h2>
-        <div className="sectionWrapper w-100 d-flex flex-column gap-4 py-3">
+        <div className="sectionWrapper w-100 d-flex flex-column gap-5 py-3">
             <div id='NativeSection' className="nativeSection row gap-3 gap-md-4 gap-lg-5 mx-auto" >
                 <h5 className='sectionHeader text-start'>Traditional Wears</h5>
                 {
@@ -182,7 +182,7 @@ const Products = () => {
                     }
             </div>
 
-            <div id='pantsSection' className="pantsSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+            <div id='PantsSection' className="pantsSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
                     <h5 className='sectionHeader'>Pants</h5>
                     {
                         isloading ? (
@@ -204,7 +204,7 @@ const Products = () => {
                     }
             </div>
 
-            <div id='cargoSection' className="cargoSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+            <div id='CargoSection' className="cargoSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
                     <h5 className='sectionHeader'>Cargo Pants</h5>
                     {
                         isloading ? (
@@ -226,7 +226,7 @@ const Products = () => {
                     }
             </div>
 
-            <div id='toteSection' className="toteSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+            <div id='ToteSection' className="toteSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
                     <h5 className='sectionHeader'>Totebags</h5>
                     {
                         isloading ? (
@@ -247,7 +247,7 @@ const Products = () => {
                     )
                     }
             </div>
-            <div id='crossSection' className="crossSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+            <div id='CrossSection' className="crossSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
                     <h5 className='sectionHeader'>Crossbags</h5>
                     {
                         isloading ? (
