@@ -41,7 +41,7 @@ const TopProductSection = () => {
                         Custom Tote Bag
                     </h6>
                     <p className='card-text'>
-                        NGN 6,999
+                        NGN 7,499
                     </p>
                     <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("503")}>Add to Cart</button>
                 </div>
