@@ -6,44 +6,44 @@ const TopProductSection = () => {
 
   return (
     <div id='TopProductSection' className='py-3 gap-2'>
-        <h2 className='sectionTitle text-center py-2'>
+        <h2 className='sectionTitle text-center fw-bold py-2'>
             Top Products
         </h2>
-        <div className="sectionWrapper container d-flex flex-wrap justify-content-around">
-            <div className="cardWrapper card w-25 ">
+        <div className="sectionWrapper container d-flex flex-wrap justify-content-around ptt-2">
+            <div className="cardWrapper card w-25">
                 <img src="/Ankara-Cross, Cargo.jpeg" alt="" className='card-img-top' />
-                <div className="cardText card-body d-flex flex-column justify-content-evenly">
+                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center">
                     <h6 className='card-title'>
-                        Name: Cargo + Crossbag
+                        Cargo + Crossbag
                     </h6>
                     <p className='card-text'>
-                        Price: 23,499 NGN
+                        NGN 23,499
                     </p>
-                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("11-22")}>Add to Cart</button>
+                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("403-603")}>Add to Cart</button>
                 </div>
             </div>
             <div className="cardWrapper card w-25">
                 <img src="/White Native Sample.jpg" alt="" className='card-img-top' />
-                <div className="cardText card-body d-flex flex-column justify-content-evenly" >
+                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center" >
                     <h6 className='card-title'>
-                        Name: Custom Native Wear
+                        Custom Native Wear
                     </h6>
                     <p className='card-text'>
-                        Price: 44,999 NGN
+                        NGN 44,999
                     </p>
-                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("33")}>Add to Cart</button>
+                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("105")}>Add to Cart</button>
                 </div>
             </div>
             <div className="cardWrapper card w-25">
                 <img src="/TFM Tote.jpeg" alt="" className='card-img-top' />
-                <div className="cardText card-body d-flex flex-column justify-content-evenly">
+                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center">
                     <h6 className='card-title'>
-                        Name: Custom Tote Bag
+                        Custom Tote Bag
                     </h6>
                     <p className='card-text'>
-                        Price: 6,999 NGN
+                        NGN 6,999
                     </p>
-                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("44")}>Add to Cart</button>
+                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart("503")}>Add to Cart</button>
                 </div>
             </div>
         </div>

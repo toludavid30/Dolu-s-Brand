@@ -48,15 +48,15 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link d-none d-md-block" to="/auth">Sign Up</Link>
                         </li>
-                        <li className="nav-item h-100">
-                            <Link className="nav-link" to="/cart">
+                        <li className="nav-item fw-bold h-100">
+                            <Link className="cart-link text-dark" to="/cart">
                               <span className='fs-5 fs-md-4 cartIcon h-100'>
-                                {cartFilled ? <i className="bi bi-cart"></i> : <i className="bi bi-cart-check-fill"></i>}
+                                {cartFilled ? <i className="bi bi-cart fs-4 fs-md-6"></i> : <i className="bi bi-cart-check-fill fs-4 fs-md-6"></i>}
                               </span>
                             </Link>
                         </li>
                         <button
-                        className="h-100 dropdown navbar-toggler d-md-none fs-5"
+                        className="h-100 dropdown navbar-toggler d-md-none fs-4"
                         type="button"
                         aria-label="Toggle navigation"
                         style={{
@@ -68,7 +68,7 @@ const Navbar = () => {
                         }}
                                     >
                         <span className="navbar-toggler-icon w-100 h-100" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i className="bi bi-list"></i>
+                            <i className="bi bi-list fs-4 fs-md-6"></i>
                         </span>
                         <ul className="dropdown-menu h-auto">
                             <li><a className="dropdown-item" href="/about">About</a></li>
