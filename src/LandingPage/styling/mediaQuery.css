@@ -453,7 +453,7 @@
         .sectionWrapper{
                 height: 75%;
                 .cardWrapper{
-                    height: 95%;
+                    height: 92%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -465,7 +465,27 @@
                     }
                 }
     }
+  }
 
+  #ProductsSection{
+    .cardWrapper{
+    height: 28dvh;
+    width: 31%;
+    img{
+      height: 50%;
+      width: 100%;
+      object-fit: contain;
+    }
+    h6{
+        font-size: small;
+    }
+    p{
+        font-size: small;
+    }
+    button{
+        font-size: small;
+    }
+  }
   }
 
 }

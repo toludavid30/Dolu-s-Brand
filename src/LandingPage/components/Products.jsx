@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useCart from '../../context/CartContext/component/useCart'
+import Loader from '../../LayoutComponents/Loader/Loader'
 
 const Products = () => {
     const {addtoCart} = useCart()
@@ -10,6 +11,7 @@ const Products = () => {
     const [cargoProducts, setCargoProducts] = useState([])
     const [toteProducts, setToteProducts] = useState([])
     const [crossProducts, setCrossProducts] = useState([])
+    const [isloading, setIsLoading] = useState(false)
     const getNativeProducts = async()=>{
         keyword = "Native wear"
         // setKeyword("Native")
@@ -105,6 +107,7 @@ const Products = () => {
 
     const getCrossProducts = async()=>{
         keyword = "Cross"
+        setIsLoading(true)
         try {
             const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
@@ -118,6 +121,8 @@ const Products = () => {
             setCrossProducts(data.products)            
         } catch (error) {
             console.log(error);
+        } finally{
+            setIsLoading(false)
         }
     }
     useEffect(()=>{
@@ -131,10 +136,14 @@ const Products = () => {
   return (
     <div id='ProductsSection' className='py-4 container'>
         <h2 className='sectionTitle text-center fw-bold'>Products</h2>
-        <div className="sectionWrapper w-100 py-3">
+        <div className="sectionWrapper w-100 d-flex flex-column gap-4 py-3">
             <div id='NativeSection' className="nativeSection row gap-3 gap-md-4 gap-lg-5 mx-auto" >
-                <h4 className='sectionHeader'>Traditional Wears</h4>
-                    {
+                <h5 className='sectionHeader text-start'>Traditional Wears</h5>
+                {
+                    isloading ? (
+                        <Loader/>
+                    ):
+                    (
                         nativeProducts?.map((elem,index) =>(
                             <div className='card cardWrapper' key={index}>
                                 <img src={elem.productImage} alt="" className='card-image-top'/>
@@ -147,10 +156,118 @@ const Products = () => {
                                 </div>
                             </div>
                         ))
+                    )
+                }
+            </div>
+            <div id='ShirtSection' className="ShirtSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+                    <h5 className='sectionHeader'>Shirts</h5>
+                    
+                    {
+                        isloading ? (
+                            <Loader/>
+                        ):(
+                        shirtProducts?.map((elem,index) =>(
+                            <div className='card cardWrapper' key={index}>
+                                <img src={elem.productImage} alt="" className='card-image-top'/>
+                                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center px-2">
+                                    <h6>
+                                        {elem.name}
+                                    </h6>
+                                    <p> ₦ {elem.price}</p>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                </div>
+                            </div>
+                        ))
+                    )
                     }
             </div>
-            <div id='ShirtSection' className="ShirtSection">
 
+            <div id='pantsSection' className="pantsSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+                    <h5 className='sectionHeader'>Pants</h5>
+                    {
+                        isloading ? (
+                            <Loader/>
+                        ):(
+                        pantsProducts?.map((elem,index) =>(
+                            <div className='card cardWrapper' key={index}>
+                                <img src={elem.productImage} alt="" className='card-image-top'/>
+                                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center px-2">
+                                    <h6>
+                                        {elem.name}
+                                    </h6>
+                                    <p> ₦ {elem.price}</p>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                </div>
+                            </div>
+                        ))
+                    )
+                    }
+            </div>
+
+            <div id='cargoSection' className="cargoSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+                    <h5 className='sectionHeader'>Cargo Pants</h5>
+                    {
+                        isloading ? (
+                            <Loader/>
+                        ):(
+                        cargoProducts?.map((elem,index) =>(
+                            <div className='card cardWrapper' key={index}>
+                                <img src={elem.productImage} alt="" className='card-image-top'/>
+                                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center px-2">
+                                    <h6>
+                                        {elem.name}
+                                    </h6>
+                                    <p> ₦ {elem.price}</p>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                </div>
+                            </div>
+                        ))
+                    )
+                    }
+            </div>
+
+            <div id='toteSection' className="toteSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+                    <h5 className='sectionHeader'>Totebags</h5>
+                    {
+                        isloading ? (
+                            <Loader/>
+                        ):(
+                        toteProducts?.map((elem,index) =>(
+                            <div className='card cardWrapper' key={index}>
+                                <img src={elem.productImage} alt="" className='card-image-top'/>
+                                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center px-2">
+                                    <h6>
+                                        {elem.name}
+                                    </h6>
+                                    <p> ₦ {elem.price}</p>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                </div>
+                            </div>
+                        ))
+                    )
+                    }
+            </div>
+            <div id='crossSection' className="crossSection row gap-3 gap-md-4 gap-lg-5 mx-auto">
+                    <h5 className='sectionHeader'>Crossbags</h5>
+                    {
+                        isloading ? (
+                            <Loader/>
+                        ):(
+                        crossProducts?.map((elem,index) =>(
+                            <div className='card cardWrapper' key={index}>
+                                <img src={elem.productImage} alt="" className='card-image-top'/>
+                                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center px-2">
+                                    <h6>
+                                        {elem.name}
+                                    </h6>
+                                    <p> ₦ {elem.price}</p>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                </div>
+                            </div>
+                        ))
+                    )
+                    }
+                    
             </div>
         </div>
     </div>
