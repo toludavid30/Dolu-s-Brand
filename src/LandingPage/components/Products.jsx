@@ -14,7 +14,7 @@ const Products = () => {
         keyword = "Native wear"
         // setKeyword("Native")
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
