@@ -21,7 +21,7 @@ const signinSchema = yup.object({
 
 
 const Auth = () => {
-  const BaseUrl = "http://localhost:5005/auth"
+  const BaseUrl = "https://noderender-i690.onrender.com/auth"
   const [isLoading, setIsLoading] = useState(false)
   const [AuthState, setAuthState] = useState("Signup")
   const [redirect, setRedirect] = useState(false)

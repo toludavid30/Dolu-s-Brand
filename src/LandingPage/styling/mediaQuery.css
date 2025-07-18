@@ -309,7 +309,7 @@
                     font-size: x-small;
                     }
                     button{
-                    font-size: xx-small;
+                    font-size: 0.65rem;
                     }
                     }
                 }
@@ -320,7 +320,7 @@
   #ProductsSection{
     .cardWrapper{
     height: 30dvh;
-    width: 31%;
+    width: 30%;
     img{
       height: 50%;
       width: 100%;

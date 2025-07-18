@@ -34,7 +34,7 @@ const Products = () => {
         keyword = "Shirt"
         // setKeyword("Native")
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -52,7 +52,7 @@ const Products = () => {
     const getPantsProducts = async()=>{
         keyword = "Trousers, Corporate"
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -70,7 +70,7 @@ const Products = () => {
     const getCargoProducts = async()=>{
         keyword = "Cargo"
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -88,7 +88,7 @@ const Products = () => {
     const getToteProducts = async()=>{
         keyword = "Tote"
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -106,7 +106,7 @@ const Products = () => {
     const getCrossProducts = async()=>{
         keyword = "Cross"
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -131,8 +131,8 @@ const Products = () => {
   return (
     <div id='ProductsSection' className='py-4 container'>
         <h2 className='sectionTitle text-center fw-bold'>Products</h2>
-        <div className="sectionWrapper py-3">
-            <div id='NativeSection' className="nativeSection row gap-3 gap-md-4 gap-lg-5" >
+        <div className="sectionWrapper w-100 py-3">
+            <div id='NativeSection' className="nativeSection row gap-3 gap-md-4 gap-lg-5 mx-auto" >
                 <h4 className='sectionHeader'>Traditional Wears</h4>
                     {
                         nativeProducts?.map((elem,index) =>(

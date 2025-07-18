@@ -9,7 +9,7 @@ const Navbar = () => {
     const searchInput = document.getElementById("searchInput").value
     if (searchInput){
         try {
-            const res = await fetch("http://localhost:5005/product/search", {
+            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword: searchInput}),
                 headers:{
