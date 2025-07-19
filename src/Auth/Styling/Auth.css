@@ -8,7 +8,6 @@
     background-image: url("/category\ bg.png"), url("/Dolu\'s\ logo.jpg");
     background-position: center;
     background-size: contain;
-    /* background-repeat: no-repeat; */
     background-blend-mode: multiply;
     min-height: 90dvh;
 }
