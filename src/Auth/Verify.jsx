@@ -17,10 +17,12 @@ const Verify = () => {
             }
         })
         const data = await res.json()
-        console.log(data);
+        // console.log(data);
         if (data.status === 200){
             alert(data.message)
             setRedirect(true)
+        }else{
+            alert(data.message)
         }
         // console.log({token});
     }
