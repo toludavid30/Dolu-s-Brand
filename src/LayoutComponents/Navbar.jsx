@@ -1,14 +1,22 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styling/nav.css'
+import useCart from '../context/CartContext/component/useCart'
 
 const Navbar = () => {
   const [cartFilled, setCartFilled] = useState(false)
-
+  const [searchItems, setSearchItems] = useState([])
+  const{addtoCart} = useCart()
+//   const[noSearchItem, setNoSearchItem] = useState()
+    // var searchItems = []
+  
   const search = async() =>{
     const searchInput = document.getElementById("searchInput").value
-    if (searchInput){
-        try {
+    if(!searchInput){
+        setSearchItems([]);
+        return;
+    }
+    try {
             const res = await fetch("https://noderender-i690.onrender.com/product/search", {
                 method: "POST",
                 body: JSON.stringify({keyword: searchInput}),
@@ -18,12 +26,19 @@ const Navbar = () => {
             })
             const data = await res.json()
             console.log(data);
+            setSearchItems(data.products)
+
+            // searchItems = data
             
         } catch (error) {
             console.log(error);
-            
         }
-    }
+    // if (searchInput && searchInput !== ""){
+        
+    // }
+    // else{
+    //     setSearchItems([])
+    // }
   }
 
   return (
@@ -35,7 +50,7 @@ const Navbar = () => {
                 </Link>
                 <div className="input-group h-100 py-3">
                     <span className='input-group-text'><i className="bi bi-search"></i></span>
-                    <input id='searchInput' type="text" className='border form-control' onChange={search}/>
+                    <input id='searchInput' type="text" className='border form-control' onInput={search}/>
                 </div>
                 <div className="navRight h-100">
                     <ul className="w-100 h-100 navRightWrap justify-content-around  d-flex align-items-center">
@@ -80,6 +95,35 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+        <div id='searchDisplay' className="searchDisplay">
+            {
+                 searchItems? (
+                    searchItems?.map((elem, index)=>(
+                        <div className='container itemWrap' key={index}>
+                            <div className="container itemWrapper border  d-flex">
+                                <img src={elem.productImage} alt="" className='card-img-top'/>
+                                <div className="card-body w-75 d-flex">
+                                    <div className="itemInfo w-75 p-3 d-flex flex-column justify-content-evenly">
+                                        <p>
+                                            Name: {elem.name}
+                                        </p>
+                                        <p>
+                                            Price: NGN {elem.price}
+                                        </p>
+                                    </div>
+                                    <div className="button w-25">
+                                        <button className='btn btn-sm btn-dark' onClick={()=>addtoCart(`${elem.id}`)}>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                ):("")
+                
+            }
+        </div>
     </div>
   )
 }

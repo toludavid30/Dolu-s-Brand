@@ -37,6 +37,37 @@
     }
 }
 
+.searchDisplay{
+    position: absolute;
+    left: 23%;
+    width: 50%;
+    height: 65dvh;
+    margin: 0 auto;
+    z-index: 1000;
+    overflow: auto;
+    .itemWrap{
+        height: 20dvh;
+        background-color: white;
+        .itemWrapper{
+            align-items: center;
+            img{
+            height: 18dvh;
+            width: 30%;
+            object-fit: contain;
+        }
+            .itemInfo{
+                height: 18dvh;
+            }
+            .button{
+                height: 18dvh;
+                display: grid;
+                place-content: center;
+            }
+        }
+        
+    }
+}
+
 
 
 @media (min-width: 500px) and (max-width: 900px){
@@ -62,6 +93,42 @@
             }
         }
     }
+    .searchDisplay{
+    position: absolute;
+    left: 20%;
+    width: 75%;
+    height: 55dvh;
+    margin: 0 auto;
+    z-index: 10000;
+    overflow: auto;
+    .itemWrap{
+        height: 12dvh;
+        .itemWrapper{
+            align-items: center;
+            img{
+            height: 10dvh;
+            width: 25%;
+            object-fit: contain;
+        }
+            .itemInfo{
+                justify-content: center !important;
+                p{
+                    font-size: small;
+                }
+                
+            }
+            .button{
+                height: 18dvh;
+                display: grid;
+                place-content: center;
+                button{
+                    font-size: x-small;
+                }
+            }
+        }
+        
+    }
+}
 }
 
 @media (max-width: 470px){
@@ -81,6 +148,42 @@
             width: 22%;
         }
     }
+    .searchDisplay{
+    position: absolute;
+    left: 20%;
+    width: 75%;
+    height: 55dvh;
+    margin: 0 auto;
+    z-index: 10000;
+    overflow: auto;
+    .itemWrap{
+        height: 12dvh;
+        .itemWrapper{
+            align-items: center;
+            img{
+            height: 10dvh;
+            width: 25%;
+            object-fit: contain;
+        }
+            .itemInfo{
+                justify-content: center !important;
+                p{
+                    font-size: x-small;
+                }
+                
+            }
+            .button{
+                height: 18dvh;
+                display: grid;
+                place-content: center;
+                button{
+                    font-size: xx-small;
+                }
+            }
+        }
+        
+    }
+}
 }
 @media (max-width: 400px){
     #navbar{
