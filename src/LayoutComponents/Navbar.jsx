@@ -100,7 +100,7 @@ const Navbar = () => {
                  searchItems? (
                     searchItems?.map((elem, index)=>(
                         <div className='container itemWrap' key={index}>
-                            <div className="container itemWrapper border  d-flex">
+                            <div className="container itemWrapper  d-flex">
                                 <img src={elem.productImage} alt="" className='card-img-top'/>
                                 <div className="card-body w-75 d-flex">
                                     <div className="itemInfo w-75 p-3 d-flex flex-column justify-content-evenly">
