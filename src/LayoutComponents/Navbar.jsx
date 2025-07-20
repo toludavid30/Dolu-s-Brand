@@ -10,8 +10,8 @@ const Navbar = () => {
 //   const[noSearchItem, setNoSearchItem] = useState()
     // var searchItems = []
   
-  const search = async() =>{
-    const searchInput = document.getElementById("searchInput").value
+  const search = async(e) =>{
+    const searchInput = e.target.value
     if(!searchInput){
         setSearchItems([]);
         return;
@@ -25,20 +25,13 @@ const Navbar = () => {
                 }
             })
             const data = await res.json()
-            console.log(data);
-            setSearchItems(data.products)
-
-            // searchItems = data
+            if(e.target.value){
+                setSearchItems(data.products)
+            }
             
         } catch (error) {
             console.log(error);
         }
-    // if (searchInput && searchInput !== ""){
-        
-    // }
-    // else{
-    //     setSearchItems([])
-    // }
   }
 
   return (
@@ -50,7 +43,7 @@ const Navbar = () => {
                 </Link>
                 <div className="input-group h-100 py-3">
                     <span className='input-group-text'><i className="bi bi-search"></i></span>
-                    <input id='searchInput' type="text" className='border form-control' onInput={search}/>
+                    <input id='searchInput' type="text" className='border form-control' onChange={search}/>
                 </div>
                 <div className="navRight h-100">
                     <ul className="w-100 h-100 navRightWrap justify-content-around  d-flex align-items-center">
@@ -100,7 +93,7 @@ const Navbar = () => {
                  searchItems? (
                     searchItems?.map((elem, index)=>(
                         <div className='container itemWrap' key={index}>
-                            <div className="container itemWrapper  d-flex">
+                            <div className="container itemWrapper d-flex">
                                 <img src={elem.productImage} alt="" className='card-img-top'/>
                                 <div className="card-body w-75 d-flex">
                                     <div className="itemInfo w-75 p-3 d-flex flex-column justify-content-evenly">

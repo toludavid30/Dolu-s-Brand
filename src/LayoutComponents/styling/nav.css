@@ -95,9 +95,9 @@
     }
     .searchDisplay{
     position: absolute;
-    left: 20%;
+    left: 14%;
     width: 75%;
-    height: 55dvh;
+    height: 45dvh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
@@ -150,9 +150,9 @@
     }
     .searchDisplay{
     position: absolute;
-    left: 15%;
+    left: 14%;
     width: 75%;
-    height: 55dvh;
+    height: 45dvh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
