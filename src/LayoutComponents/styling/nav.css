@@ -40,10 +40,12 @@
 .searchDisplay{
     position: absolute;
     left: 23%;
+    /* top: 10%; */
     width: 50%;
-    height: 65dvh;
+    height: auto;
+    max-height: 50dvh;
     margin: 0 auto;
-    z-index: 1000;
+    z-index: 100;
     overflow: auto;
     .itemWrap{
         height: 20dvh;
@@ -97,7 +99,8 @@
     position: absolute;
     left: 14%;
     width: 75%;
-    height: 45dvh;
+    height: auto;
+    max-height: 40dvh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
@@ -152,7 +155,8 @@
     position: absolute;
     left: 14%;
     width: 75%;
-    height: 45dvh;
+    height: auto;
+    max-height: 40dvh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
@@ -161,7 +165,7 @@
         .itemWrapper{
             align-items: center;
             img{
-            height: 10dvh;
+            height: 8dvh;
             width: 25%;
             object-fit: contain;
         }
@@ -173,9 +177,8 @@
                 
             }
             .button{
-                height: 18dvh;
-                display: grid;
-                place-content: center;
+                height: 100%;
+                margin: auto;
                 button{
                     font-size: xx-small;
                 }

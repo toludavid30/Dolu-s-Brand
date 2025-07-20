@@ -88,15 +88,16 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
-        <div id='searchDisplay' className="searchDisplay">
             {
                  searchItems? (
+                    <div id='searchDisplay' className="searchDisplay">
+                        {
                     searchItems?.map((elem, index)=>(
-                        <div className='container itemWrap' key={index}>
+                        <div className='container itemWrap border border-2 p-2' key={index}>
                             <div className="container itemWrapper d-flex">
                                 <img src={elem.productImage} alt="" className='card-img-top'/>
                                 <div className="card-body w-75 d-flex">
-                                    <div className="itemInfo w-75 p-3 d-flex flex-column justify-content-evenly">
+                                    <div className="itemInfo w-75 p-3 d-flex h-100 flex-column">
                                         <p>
                                             Name: {elem.name}
                                         </p>
@@ -112,11 +113,11 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                    ))
-                ):("")
-                
+                    ))}
+                  </div>  
+                ):("")  
             }
-        </div>
+        
     </div>
   )
 }
