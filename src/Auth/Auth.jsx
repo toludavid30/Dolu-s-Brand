@@ -104,7 +104,9 @@ const handleSignUp = async (userData) => {
         alert("Sign In successful")
         localStorage.setItem("token", JSON.stringify(data.token))
         localStorage.setItem("user", JSON.stringify(data.user))
-        setRedirect(true)
+        // setRedirect(true)
+        window.location.href = "/"
+        
       } else {
         alert(data.message || "An error occurred during registration")
       }

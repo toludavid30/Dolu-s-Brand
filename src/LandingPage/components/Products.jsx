@@ -24,7 +24,7 @@ const Products = () => {
                 }
             })
             const data = await res.json()
-            console.log(data.products);
+            // console.log(data.products);
             setNativeProducts(data.products)
             
         } catch (error) {
@@ -44,7 +44,7 @@ const Products = () => {
                 }
             })
             const data = await res.json()
-            console.log(data.products);
+            // console.log(data.products);
             setShirtProducts(data.products)            
         } catch (error) {
             console.log(error);
@@ -62,7 +62,7 @@ const Products = () => {
                 }
             })
             const data = await res.json()
-            console.log(data.products);
+            // console.log(data.products);
             setPantsProducts(data.products)            
         } catch (error) {
             console.log(error);
@@ -80,7 +80,7 @@ const Products = () => {
                 }
             })
             const data = await res.json()
-            console.log(data.products);
+            // console.log(data.products);
             setCargoProducts(data.products)            
         } catch (error) {
             console.log(error);
@@ -98,7 +98,7 @@ const Products = () => {
                 }
             })
             const data = await res.json()
-            console.log(data.products);
+            // console.log(data.products);
             setToteProducts(data.products)            
         } catch (error) {
             console.log(error);
@@ -117,7 +117,7 @@ const Products = () => {
                 }
             })
             const data = await res.json()
-            console.log(data.products);
+            // console.log(data.products);
             setCrossProducts(data.products)            
         } catch (error) {
             console.log(error);

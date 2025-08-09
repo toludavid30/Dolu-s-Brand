@@ -18,6 +18,7 @@ const Contact = () => {
       })
       const data = await res.json()
       console.log(data);
+      alert(data.message)
     } catch (error) {
       console.log(error);
     }finally{

@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import { cartContext } from '../CartProvider'
+import _default from 'eslint-plugin-react-refresh'
 
 const useCart = () => {
     const {cartProducts, setCartProducts} = useContext(cartContext)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const checkIsLoggedIn = () => {
+        const currentUser = JSON.parse(localStorage.getItem("user"))
+        const currentToken = JSON.parse(localStorage.getItem("token"))
+        if(currentUser && currentToken){
+            setIsLoggedIn(true)
+            // console.log(isLoggedIn);   
+        }
+    }
+    const logOutUser = () => {
+        localStorage.removeItem("user")
+        localStorage.removeItem("token")
+        setIsLoggedIn(false)
+        window.location.reload()
+    }  
     const addtoCart = (productID) => {
         setCartProducts((prev) => {
             const existingIndex = prev.findIndex(item => item.id === productID);
@@ -20,6 +36,9 @@ const useCart = () => {
     }
   return {
     addtoCart,
+    isLoggedIn,
+    logOutUser,
+    checkIsLoggedIn
   }
 }
 

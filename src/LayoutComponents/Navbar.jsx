@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styling/nav.css'
 import useCart from '../context/CartContext/component/useCart'
@@ -6,9 +6,12 @@ import useCart from '../context/CartContext/component/useCart'
 const Navbar = () => {
   const [cartFilled, setCartFilled] = useState(false)
   const [searchItems, setSearchItems] = useState([])
-  const{addtoCart} = useCart()
-//   const[noSearchItem, setNoSearchItem] = useState()
-    // var searchItems = []
+  const{isLoggedIn, logOutUser, checkIsLoggedIn, addtoCart} = useCart()
+
+  
+  useEffect(()=>{
+    checkIsLoggedIn()
+  }, [])
   
   const search = async(e) =>{
     const searchInput = e.target.value
@@ -54,7 +57,11 @@ const Navbar = () => {
                             <Link className="nav-link d-none d-md-block" to="/contact">Contact Us</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-none d-md-block" to="/auth">Sign Up</Link>
+                            {    isLoggedIn ?
+                                <Link className="nav-link d-none d-md-block" onClick={ logOutUser}>Log out</Link>
+                                :
+                                <Link className="nav-link d-none d-md-block" to="/auth">Sign Up</Link>
+                            }
                         </li>
                         <li className="nav-item fw-bold h-100">
                             <Link className="cart-link text-dark" to="/cart">
@@ -81,7 +88,13 @@ const Navbar = () => {
                         <ul className="dropdown-menu h-auto">
                             <li><a className="dropdown-item" href="/about">About</a></li>
                             <li><a className="dropdown-item" href="/Contact">Contact Us</a></li>
-                            <li><a className="dropdown-item" href="/auth">Sign Up</a></li>
+                            <li>
+                                {isLoggedIn?
+                                <a className="dropdown-item" onClick={logOutUser}>Log Out</a>
+                                :
+                                <a className="dropdown-item" href="/auth">Sign Up</a>
+                            }      
+                            </li>
                         </ul>
                         </button>
                     </ul>
