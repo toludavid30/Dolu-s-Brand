@@ -3,7 +3,10 @@ import useCart from '../../context/CartContext/component/useCart'
 import Loader from '../../LayoutComponents/Loader/Loader'
 
 const Products = () => {
-    const {addtoCart} = useCart()
+    const {isLoggedIn, checkIsLoggedIn, addtoCart} = useCart()
+    useEffect(()=>{
+        checkIsLoggedIn()
+    })
     var keyword = ""
     const [nativeProducts, setNativeProducts] = useState([])
     const [shirtProducts, setShirtProducts] = useState([])
@@ -152,7 +155,19 @@ const Products = () => {
                                         {elem.name}
                                     </h6>
                                     <p> ₦ {elem.price}</p>
-                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                                        isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                        }>Add to Cart</button>
                                 </div>
                             </div>
                         ))
@@ -174,7 +189,19 @@ const Products = () => {
                                         {elem.name}
                                     </h6>
                                     <p> ₦ {elem.price}</p>
-                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                                        isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                    }>Add to Cart</button>
                                 </div>
                             </div>
                         ))
@@ -196,7 +223,19 @@ const Products = () => {
                                         {elem.name}
                                     </h6>
                                     <p> ₦ {elem.price}</p>
-                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                                        isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                    }>Add to Cart</button>
                                 </div>
                             </div>
                         ))
@@ -218,7 +257,19 @@ const Products = () => {
                                         {elem.name}
                                     </h6>
                                     <p> ₦ {elem.price}</p>
-                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                                        isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                    }>Add to Cart</button>
                                 </div>
                             </div>
                         ))
@@ -240,7 +291,19 @@ const Products = () => {
                                         {elem.name}
                                     </h6>
                                     <p> ₦ {elem.price}</p>
-                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                                        isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                    }>Add to Cart</button>
                                 </div>
                             </div>
                         ))
@@ -261,7 +324,19 @@ const Products = () => {
                                         {elem.name}
                                     </h6>
                                     <p> ₦ {elem.price}</p>
-                                    <button className='btn btn-sm btn-dark mx-auto' onClick={()=>addtoCart(`${elem.id}`)}>Add to Cart</button>
+                                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                                        isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                    }>Add to Cart</button>
                                 </div>
                             </div>
                         ))

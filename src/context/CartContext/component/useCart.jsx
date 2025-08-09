@@ -32,8 +32,17 @@ const useCart = () => {
                 }
         }) 
         console.log(cartProducts);
-             
     }
+        // alert("Kindly sign in to Access this function")
+    //     {
+    //             Swal.fire({
+    //                 title: 'Error',
+    //                 text: 'Kindly sign in to Access this function',
+    //                 icon: 'info',
+    //                 confirmButtonText: 'OK'
+    //             });
+    // }
+
   return {
     addtoCart,
     isLoggedIn,
@@ -41,5 +50,6 @@ const useCart = () => {
     checkIsLoggedIn
   }
 }
+
 
 export default useCart
