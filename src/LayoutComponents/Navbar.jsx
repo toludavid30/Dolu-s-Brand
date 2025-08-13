@@ -106,7 +106,7 @@ const Navbar = () => {
                     <div id='searchDisplay' className="searchDisplay">
                         {
                     searchItems?.map((elem, index)=>(
-                        <div className='container itemWrap border border-2 p-2' key={index}>
+                        <div className='container itemWrap border border-2' key={index}>
                             <div className="container itemWrapper d-flex">
                                 <img src={elem.productImage} alt="" className='card-img-top'/>
                                 <div className="card-body w-75 d-flex">
@@ -119,7 +119,19 @@ const Navbar = () => {
                                         </p>
                                     </div>
                                     <div className="button w-25">
-                                        <button className='btn btn-sm btn-dark' onClick={()=>addtoCart(`${elem.id}`)}>
+                                        <button className='btn btn-sm btn-dark' onClick={
+                                            isLoggedIn ?
+                                        ()=>addtoCart(`${elem.id}`)
+                                        :
+                                        () => {
+                                                    Swal.fire({
+                                                        title: 'Error',
+                                                        text: 'Kindly sign in to access this function',
+                                                        icon: 'info',
+                                                        confirmButtonText: 'OK'
+                                                    });
+                                        }
+                                            }>
                                             Add to Cart
                                         </button>
                                     </div>

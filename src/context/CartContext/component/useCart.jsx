@@ -32,6 +32,7 @@ const useCart = () => {
                 }
         }) 
         console.log(cartProducts);
+        
     }
         // alert("Kindly sign in to Access this function")
     //     {
