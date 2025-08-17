@@ -13,7 +13,7 @@ const Cart = () => {
                     <img src="/vecteezy_user-profile-icon-symbol-vector-template_36744532.jpg" alt="" />
                 </div>
                 <div className="userName">
-                    <h5 className='text-cen'>Welcome {currentUser.name}</h5>
+                    <h5 className='text-center'>Welcome {currentUser?.name}</h5>
                 </div>
             </div>
         </div>
