@@ -10,6 +10,7 @@ import CartProvider from './context/CartContext/CartProvider';
 import About from './About/About';
 import Contact from './Contact/Contact';
 import Footer from './LayoutComponents/Footer';
+import Cart from './context/CartContext/component/Cart';
 
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
       <Route path='/auth' element={<Auth/>}/>
       <Route path='/verify/:token' element={<Verify/>} />
       <Route path='/about' element={<About/>}/>
-      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/contact' element={<Contact/>}/> 
+      <Route path='/cart' element={<Cart/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     <Footer/>

@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { cartContext } from '../CartProvider'
 import _default from 'eslint-plugin-react-refresh'
 
 const useCart = () => {
     const {cartProducts, setCartProducts} = useContext(cartContext)
+    // const BaseUrl = "https://noderender-i690.onrender.com/auth"
+    const BaseUrl = "http://localhost:5005/auth"
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const checkIsLoggedIn = () => {
         const currentUser = JSON.parse(localStorage.getItem("user"))
@@ -20,8 +22,8 @@ const useCart = () => {
         setIsLoggedIn(false)
         window.location.reload()
     }  
-    const addtoCart = (productID) => {
-        setCartProducts((prev) => {
+    const addtoCart = async(productID) => {
+        await setCartProducts((prev) => {
             const existingIndex = prev.findIndex(item => item.id === productID);
                 if (existingIndex !== -1) {
                     const updated = [...prev];
@@ -31,24 +33,54 @@ const useCart = () => {
                     return [...prev, {id: productID, quantity: 1}];
                 }
         }) 
-        console.log(cartProducts);
         
     }
-        // alert("Kindly sign in to Access this function")
-    //     {
-    //             Swal.fire({
-    //                 title: 'Error',
-    //                 text: 'Kindly sign in to Access this function',
-    //                 icon: 'info',
-    //                 confirmButtonText: 'OK'
-    //             });
+    useEffect(()=>{
+        const prevCartItems = JSON.parse(localStorage.getItem("cartItems"))
+        if(prevCartItems) {
+            setCartProducts(prevCartItems)
+        }
+    },[])
+
+    useEffect(()=>{ 
+        const syncPrevCart = () =>{
+            localStorage.setItem("cartItems", JSON.stringify(cartProducts))
+        const currentUser = JSON.parse(localStorage.getItem("user"))
+         
+           const cartPayload = {
+            userId: currentUser._id,
+            cartItems: cartProducts
+           }
+        const syncCart = async() =>{
+        try { 
+                const res = await fetch( `${BaseUrl}/updateCart`,{
+                    method: "POST",
+                    body: JSON.stringify(cartPayload),
+                    headers:{
+                        "Content-Type" : "application/json"
+                    }
+                })
+                const data = await res.json()
+                console.log(data);
+                console.log(cartPayload); 
+                } catch (error) {
+                    console.log(error);      
+                }
+        }
+        syncCart()
+        }
+        setTimeout(syncPrevCart, 50)
+        
+    //     console.log(cartProducts);
     // }
+    },[cartProducts])
 
   return {
     addtoCart,
     isLoggedIn,
     logOutUser,
-    checkIsLoggedIn
+    checkIsLoggedIn,
+    cartProducts,
   }
 }
 

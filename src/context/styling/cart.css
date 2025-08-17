@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .cartWrapper{
+        .userInfo{
+            width: 30%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .profilePic{
+                width: 25dvh;
+                img{
+                    height: 25dvh;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
