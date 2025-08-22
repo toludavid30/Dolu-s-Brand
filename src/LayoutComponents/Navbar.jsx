@@ -81,7 +81,7 @@ const Navbar = () => {
                             padding: '0 10px',
                             fontSize: '2rem'
                         }}
-                                    >
+                        >
                         <span className="navbar-toggler-icon w-100 h-100" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i className="bi bi-list fs-4 fs-md-6"></i>
                         </span>
