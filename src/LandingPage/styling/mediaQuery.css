@@ -113,14 +113,14 @@
   }
 
   #TopProductSection{
-    height: 50dvh;
+    height: auto;
         .sectionTitle{
             height: 7%;
             }
         .sectionWrapper{
-                height: 80%;
+                /* height: 80%; */
                 .cardWrapper{
-                    height: 90%;
+                    height: 35dvh;
                     display: flex;
                     flex-direction: column;
                     /* justify-content: space-between; */
@@ -286,14 +286,12 @@
   }
 
   #TopProductSection{
-    height: 50dvh;
+    height: auto;
         .sectionTitle{
             height: 7%;
             }
-        .sectionWrapper{
-                height: 80%;
-                .cardWrapper{
-                    height: 90%;
+        .sectionWrapper{                .cardWrapper{
+                    height: 30dvh;
                     display: flex;
                     flex-direction: column;
                     /* justify-content: space-between; */
@@ -446,12 +444,12 @@
   }
 
   #TopProductSection{
-    height: 60dvh;
+    height: auto;
         .sectionTitle{
             height: 7%;
             }
         .sectionWrapper{
-                height: 75%;
+                height: 40dvh;
                 .cardWrapper{
                     height: 92%;
                     display: flex;

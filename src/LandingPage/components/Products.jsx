@@ -137,7 +137,7 @@ const Products = () => {
         getCrossProducts()
     },[])
   return (
-    <div id='ProductsSection' className='py-5 container'>
+    <div id='ProductsSection' className='py-4 container'>
         <h2 className='sectionTitle text-center fw-bold'>Products</h2>
         <div className="sectionWrapper w-100 d-flex flex-column gap-5 py-3">
             <div id='NativeSection' className="nativeSection row gap-3 gap-md-4 gap-lg-5 mx-auto" >

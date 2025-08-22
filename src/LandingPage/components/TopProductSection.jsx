@@ -8,11 +8,11 @@ const TopProductSection = () => {
           checkIsLoggedIn()
         }, [])
   return (
-    <div id='TopProductSection' className='py-3 gap-2'>
+    <div id='TopProductSection' className='py-4 gap-2'>
         <h2 className='sectionTitle text-center fw-bold py-2'>
             Top Products
         </h2>
-        <div className="sectionWrapper container d-flex flex-wrap justify-content-around ptt-2">
+        <div className="sectionWrapper container d-flex flex-wrap justify-content-around">
             <div className="cardWrapper card w-25">
                 <img src="/Ankara-Cross, Cargo.jpeg" alt="" className='card-img-top' />
                 <div className="cardText card-body d-flex flex-column justify-content-evenly text-center">
