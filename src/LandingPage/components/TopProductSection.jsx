@@ -15,7 +15,7 @@ const TopProductSection = () => {
         <div className="sectionWrapper container d-flex flex-wrap justify-content-around">
             <div className="cardWrapper card w-25">
                 <img src="/Ankara-Cross, Cargo.jpeg" alt="" className='card-img-top' />
-                <div className="cardText py-3 card-body d-flex flex-column justify-content-evenly text-center">
+                <div className="cardText card-body d-flex flex-column justify-content-evenly text-center">
                     <h6 className='card-title'>
                         Cargo + Crossbag
                     </h6>

@@ -205,5 +205,43 @@
             width: 25%;
         }
     }
+
+    .searchDisplay{
+    position: absolute;
+    left: 12%;
+    width: 80%;
+    height: auto;
+    max-height: 35dvh;
+    margin: 0 auto;
+    z-index: 10000;
+    overflow: auto;
+    .itemWrap{
+        height: 11dvh;
+        .itemWrapper{
+            align-items: center;
+            /* justify-content: space-between !important; */
+            img{
+            height: 8dvh;
+            width: 25%;
+            object-fit: contain;
+        }
+            .itemInfo{
+                justify-content: center !important;
+                p{
+                    font-size: x-small;
+                }
+                
+            }
+            .button{
+                height: 100%;
+                margin: auto;
+                button{
+                    font-size: xx-small;
+                }
+            }
+        }
+        
+    }
+}
 }
 

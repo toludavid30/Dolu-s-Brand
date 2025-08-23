@@ -106,8 +106,8 @@ const Navbar = () => {
                     <div id='searchDisplay' className="searchDisplay">
                         {
                     searchItems?.map((elem, index)=>(
-                        <div className='container itemWrap border border-2' key={index}>
-                            <div className="container itemWrapper d-flex">
+                        <div className='containe itemWrap border border-2' key={index}>
+                            <div className="container itemWrapper h-100 d-flex">
                                 <img src={elem.productImage} alt="" className='card-img-top'/>
                                 <div className="card-body w-75 d-flex">
                                     <div className="itemInfo w-75 p-3 d-flex h-100 flex-column">
