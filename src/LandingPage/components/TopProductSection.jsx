@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import useCart from '../../context/CartContext/component/useCart'
+import { href } from 'react-router-dom'
 
 const TopProductSection = () => {
     const {isLoggedIn, checkIsLoggedIn, addtoCart} = useCart()
@@ -22,19 +23,7 @@ const TopProductSection = () => {
                     <p className='card-text'>
                         NGN 23,499
                     </p>
-                    <button className='btn btn-sm btn-dark mx-auto' onClick={
-                        isLoggedIn ?
-                        ()=>addtoCart("403-603")
-                        :
-                        () => {
-                                    Swal.fire({
-                                        title: 'Error',
-                                        text: 'Kindly sign in to Access this function',
-                                        icon: 'info',
-                                        confirmButtonText: 'OK'
-                                    });
-                        }
-                        }>Add to Cart</button>
+                    <a className='btn btn-sm btn-dark mx-auto' href='/products/403-603'>View Product</a>
                 </div>
             </div>
             <div className="cardWrapper card w-25">
@@ -46,7 +35,7 @@ const TopProductSection = () => {
                     <p className='card-text'>
                         NGN 44,999
                     </p>
-                    <button className='btn btn-sm btn-dark mx-auto' onClick={
+                    {/* <button className='btn btn-sm btn-dark mx-auto' onClick={
                         isLoggedIn ?
                         ()=>addtoCart("105")
                         :
@@ -58,7 +47,8 @@ const TopProductSection = () => {
                                         confirmButtonText: 'OK'
                                     });
                         }
-                        }>Add to Cart</button>
+                        }>Add to Cart</button> */}
+                        <a className='btn btn-sm btn-dark mx-auto' href="/products/105">View Product</a>
                 </div>
             </div>
             <div className="cardWrapper card w-25">
@@ -70,19 +60,7 @@ const TopProductSection = () => {
                     <p className='card-text'>
                         NGN 7,499
                     </p>
-                    <button className='btn btn-sm btn-dark mx-auto' onClick={
-                        isLoggedIn ?
-                        ()=>addtoCart("503")
-                        :
-                        () => {
-                                    Swal.fire({
-                                        title: 'Error',
-                                        text: 'Kindly sign in to Access this function',
-                                        icon: 'info',
-                                        confirmButtonText: 'OK'
-                                    });
-                        }
-                        }>Add to Cart</button>
+                    <a className='btn btn-sm btn-dark mx-auto' href='/products/503'>View Product</a>
                 </div>
             </div>
         </div>

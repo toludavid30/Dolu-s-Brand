@@ -11,10 +11,10 @@ const Herosection = () => {
           x: -400,
           y: 180,
           scale: 0.5,
-          rotation: 150,
+          rotation: 180,
           ease: "power3.out",
         },{
-              duration: 2.5,
+              duration: 4,
               opacity: 1,
               x: 0,
               y: 60,
@@ -32,7 +32,7 @@ const Herosection = () => {
           rotation: 150,
           ease: "power3.out",
         },{
-              duration: 2.5,
+              duration: 4,
               opacity: 1,
               x: 0,
               y: 60,
@@ -50,7 +50,7 @@ const Herosection = () => {
           rotation: 150,
           ease: "power3.out",
         },{
-              duration: 2.5,
+              duration: 4,
               opacity: 1,
               x: 0,
               y: 65,
@@ -68,7 +68,7 @@ const Herosection = () => {
           rotation: 150,
           ease: "power3.out",
         },{
-              duration: 2.5,
+              duration: 4,
               opacity: 1,
               x: 0,
               y: 65,

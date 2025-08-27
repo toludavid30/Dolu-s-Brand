@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { cartContext } from '../CartProvider'
 import _default from 'eslint-plugin-react-refresh'
+import { Await } from 'react-router-dom'
 
 const useCart = () => {
     const {cartProducts, setCartProducts} = useContext(cartContext)
     // const BaseUrl = "https://noderender-i690.onrender.com/auth"
     const BaseUrl = "http://localhost:5005/auth"
+    const BaseUrl2 = "http://localhost:5005/product"
     const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [retrievedCart, setRetrievedCart] = useState()
     const checkIsLoggedIn = () => {
         const currentUser = JSON.parse(localStorage.getItem("user"))
         const currentToken = JSON.parse(localStorage.getItem("token"))
@@ -22,15 +25,19 @@ const useCart = () => {
         setIsLoggedIn(false)
         window.location.reload()
     }  
-    const addtoCart = async(productID) => {
+    const addtoCart = async(productID, productColor, productSize, quantity) => {
         await setCartProducts((prev) => {
             const existingIndex = prev.findIndex(item => item.id === productID);
                 if (existingIndex !== -1) {
                     const updated = [...prev];
-                    updated[existingIndex] = {...updated[existingIndex], quantity: updated[existingIndex].quantity + 1};
+                    updated[existingIndex] = {...updated[existingIndex], 
+                        // quantity: updated[existingIndex].quantity + 1,
+                        quantity: quantity, 
+                        color : productColor, 
+                        size : productSize};
                     return updated;
                 } else {
-                    return [...prev, {id: productID, quantity: 1}];
+                    return [...prev, {id: productID, quantity: quantity, color: productColor, size: productSize}];
                 }
         }) 
         
@@ -75,12 +82,29 @@ const useCart = () => {
     // }
     },[cartProducts])
 
+    const retrieveCartItems = async(productID, cartContainer)=>{
+        try{
+            const res = await fetch(`${BaseUrl2}/${productID}`)
+            const data =  await res.json()
+            // console.log(data);
+            // setRetrievedCart(prev => prev ? prev + data : data)
+            const containerWrapper = document.createElement("div")
+            // cartContainer.innerHTML =
+        }catch(error){
+            console.log(error);
+            
+        }
+        
+    }
+
   return {
     addtoCart,
     isLoggedIn,
     logOutUser,
     checkIsLoggedIn,
     cartProducts,
+    retrieveCartItems,
+    retrievedCart
   }
 }
 

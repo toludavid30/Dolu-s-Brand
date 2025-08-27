@@ -11,6 +11,7 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import Footer from './LayoutComponents/Footer';
 import Cart from './context/CartContext/component/Cart';
+import SingleProducts from './singleProducts/SingleProducts';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
     <Navbar/>
     <Routes>
       <Route path='/' element={<LandingPage/>}/>
+      <Route path="/products/:productID" element={<SingleProducts/>}/>
       <Route path='/auth' element={<Auth/>}/>
       <Route path='/verify/:token' element={<Verify/>} />
       <Route path='/about' element={<About/>}/>
