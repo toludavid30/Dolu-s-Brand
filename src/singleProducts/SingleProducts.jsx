@@ -83,8 +83,11 @@ const SingleProducts = () => {
                                 <li tabindex="0"  className='XXlarge border border-2 btn btn-small' onClick={()=>setSize("2x Extra-Large")}>XXL</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="productButtons py-4">
+                    </div
+                    >
+                    <div className="py-4">
+                        <p>Quantity:</p>
+                        <div className="productButtons">
                             <input type="number" name="" id="" min="1" max="5" className='quantityContain p-1' onChange={()=>setQuantity(document.querySelector(".quantityContain").value)}/>
                             <button className='btn btn-small bg-dark text-light'
                             onClick={
@@ -110,7 +113,9 @@ const SingleProducts = () => {
                         }
                         }
                         > Add to Cart</button>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         }
