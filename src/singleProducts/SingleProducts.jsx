@@ -5,7 +5,7 @@ import Loader from '../LayoutComponents/Loader/Loader'
 import useCart from '../context/CartContext/component/useCart'
 
 const SingleProducts = () => {
-    const BaseUrl = "http://localhost:5005/product"
+    const BaseUrl = "https://noderender-i690.onrender.com/product"
     const {productID} = useParams()
     // const {addtoCart} = useCart()
     const {isLoggedIn, checkIsLoggedIn, addtoCart} = useCart()
