@@ -7,8 +7,8 @@ import { Await } from 'react-router-dom'
 const useCart = () => {
     const {cartProducts, setCartProducts} = useContext(cartContext)
     // const BaseUrl = "https://noderender-i690.onrender.com/auth"
-    const BaseUrl = "http://localhost:5005/auth"
-    const BaseUrl2 = "http://localhost:5005/product"
+    const BaseUrl = "http://noderender-i690.onrender.com/auth"
+    const BaseUrl2 = "http://noderender-i690.onrender.com/product"
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [retrievedCart, setRetrievedCart] = useState()
     const checkIsLoggedIn = () => {
