@@ -20,8 +20,7 @@ const SingleProducts = () => {
             const res = await fetch(`${BaseUrl}/${productID}`);
             const data =  await res.json()
             setProduct(data.product)
-            console.log(productID);
-            
+            // console.log(productID);   
         } catch (error) {
             console.log(error);
         }finally{

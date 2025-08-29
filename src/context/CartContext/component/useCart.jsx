@@ -40,7 +40,15 @@ const useCart = () => {
                     return [...prev, {id: productID, quantity: quantity, color: productColor, size: productSize}];
                 }
         }) 
-        
+        Swal.fire({
+                        title: 'Success',
+                        text: 'Product added to cart',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        themeColor: '#000000',
+                        btnColor: '#7CFC00',
+                        btnColor: true
+                    });
     }
     useEffect(()=>{
         const prevCartItems = JSON.parse(localStorage.getItem("cartItems"))
@@ -53,7 +61,6 @@ const useCart = () => {
         const syncPrevCart = () =>{
             localStorage.setItem("cartItems", JSON.stringify(cartProducts))
         const currentUser = JSON.parse(localStorage.getItem("user"))
-         
            const cartPayload = {
             userId: currentUser._id,
             cartItems: cartProducts
@@ -76,26 +83,33 @@ const useCart = () => {
         }
         syncCart()
         }
-        setTimeout(syncPrevCart, 50)
+        setTimeout(syncPrevCart, 100)
         
-    //     console.log(cartProducts);
-    // }
     },[cartProducts])
 
-    const retrieveCartItems = async(productID, cartContainer)=>{
+    const retrieveCartItems = async(productID, productColor, productSize, productQuantity)=>{
         try{
             const res = await fetch(`${BaseUrl2}/${productID}`)
             const data =  await res.json()
-            // console.log(data);
-            // setRetrievedCart(prev => prev ? prev + data : data)
-            const containerWrapper = document.createElement("div")
-            // cartContainer.innerHTML =
+            const product = data.product
+        return {
+            id: productID,
+            name: product.name,
+            color: productColor,
+            size: productSize,
+            quantity: productQuantity,
+            image: product.productImage,
+            price: product.price
+        };
+               
         }catch(error){
             console.log(error);
-            
+            return null
         }
         
     }
+
+    const removeFromCart = (productID) => {setCartProducts(prev => prev.filter(item => item.id !== productID))};
 
   return {
     addtoCart,
@@ -103,8 +117,10 @@ const useCart = () => {
     logOutUser,
     checkIsLoggedIn,
     cartProducts,
+    setRetrievedCart,
     retrieveCartItems,
-    retrievedCart
+    retrievedCart,
+    removeFromCart
   }
 }
 

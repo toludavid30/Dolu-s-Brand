@@ -18,5 +18,169 @@
             }
 
         }
+        .userCart{
+            #cartItemsWrap{
+                .itemsWrap{
+                    height: auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    .left{
+                        width: 40%;
+                        align-items: center;
+                        .imgWrap{
+                            height: 25dvh;
+                            width: 35%;
+                            img{
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        .productInfo{
+                            /* height: 10dvh; */
+                        }
+                    }
+                    .right{
+                        width: 45%;
+                        justify-content: space-between;
+                        align-items: center;
+                        .input-body{ 
+                            width: 20%;
+                            align-items: center;
+                            p{
+                                margin: 0;
+                            }
+                            .quantityContain{
+                            width: 45px;
+                            height: 40px;
+                        }
+                        }
+                        .removeIcon{
+                            width: 10%;
+                            
+                        }
+                        .priceContainer{
+                            width: 40%;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .cartWrapper{
+    .userCart{
+            #cartItemsWrap{
+                .itemsWrap{
+                    height: auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    .left{
+                        width: 45%;
+                        align-items: center;
+                        .imgWrap{
+                            height: 10dvh;
+                            width: 50%;
+                        }
+                        .productInfo{
+                            h5{
+                                font-size: smaller;
+                            }
+                            h6{
+                                font-size: smaller;
+                            }
+                        }
+                    }
+                    .right{
+                        width: 50%;
+                        justify-content: space-between;
+                        align-items: center;
+                        .input-body{ 
+                            width: 20%;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                font-size: smaller;
+                            }
+                            .quantityContain{
+                            width: 33px;
+                            height: 28px;
+                        }
+                        }
+                        .priceContainer{
+                            width: 50%;
+                            flex-direction: column;
+                            span{
+                                font-size: smaller;
+                                
+                            }
+                            h6{
+                                font-size: smaller;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:500px) and (max-width: 1050px){
+    .cartWrapper{
+    .userCart{
+            #cartItemsWrap{
+                .itemsWrap{
+                    height: auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    .left{
+                        width: 45%;
+                        align-items: center;
+                        .imgWrap{
+                            height: 13dvh;
+                            width: 50%;
+                        }
+                        .productInfo{
+                            h5{
+                                font-size: smaller;
+                            }
+                            h6{
+                                font-size: smaller;
+                            }
+                        }
+                    }
+                    .right{
+                        width: 50%;
+                        justify-content: space-between;
+                        align-items: center;
+                        .input-body{ 
+                            width: 20%;
+                            align-items: center;
+                            /* flex-direction: column; */
+                            p{
+                                font-size: smaller;
+                            }
+                            .quantityContain{
+                            width: 35px;
+                            height: 30px;
+                        }
+                        }
+                        .priceContainer{
+                            width: 50%;
+                            flex-direction: column;
+                            span{
+                                font-size: smaller;
+                                
+                            }
+                            h6{
+                                font-size: smaller;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

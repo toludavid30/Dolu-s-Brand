@@ -85,7 +85,7 @@
         .wrap{
             flex-direction: column;
        .productImage{
-        height: 45dvh;
+        height: 55dvh;
         width: 95dvw;
         img{
             height: 100%;
