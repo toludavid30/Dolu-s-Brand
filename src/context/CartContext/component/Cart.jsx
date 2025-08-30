@@ -60,7 +60,7 @@ const Cart = () => {
                 retrievedCart && retrievedCart.length > 0 ? (
                     retrievedCart.map((item, idx) => (
                     <div className="itemsWrap container d-flex py-2 border-bottom border-3" key={item.id || idx}>
-                        <div className="left d-flex gap-4">
+                        <div className="left d-flex gap-2 gap-md-4">
                         <div className="imgWrap">
                             <img src={item.image} alt={item.name} className='rounded-3'/>
                         </div>
@@ -102,7 +102,16 @@ const Cart = () => {
                 {
                     retrievedCart && retrievedCart.length > 0 ? (
                         <div className='checkoutButton w-100 text-center py-4 py-md-5'>
-                            <div className="btn btn-large bg-dark text-light text-center py-2 px-4">
+                            <div className="btn btn-large bg-dark text-light text-center py-2 px-4" onClick={
+                                () => {
+                                    Swal.fire({
+                                        title: 'Error',
+                                        text: 'Sorry, Checkout is curently unavailable',
+                                        icon: 'info',
+                                        confirmButtonText: 'OK'
+                                    });
+                                }
+                            }>
                                 Checkout NGN{accTotal}
                             </div>
                         </div>
