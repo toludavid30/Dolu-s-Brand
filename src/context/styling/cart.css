@@ -78,11 +78,11 @@
                     justify-content: space-between;
                     align-items: center;
                     .left{
-                        width: 45%;
+                        width: 60%;
                         align-items: center;
                         .imgWrap{
                             height: 10dvh;
-                            width: 50%;
+                            width: 40%;
                         }
                         .productInfo{
                             h5{
@@ -94,23 +94,23 @@
                         }
                     }
                     .right{
-                        width: 50%;
+                        width: 37%;
                         justify-content: space-between;
                         align-items: center;
                         .input-body{ 
-                            width: 20%;
+                            width: 30%;
                             align-items: center;
                             flex-direction: column;
                             p{
                                 font-size: smaller;
                             }
                             .quantityContain{
-                            width: 33px;
-                            height: 28px;
+                            width: 30px;
+                            height: 25px;
                         }
                         }
                         .priceContainer{
-                            width: 50%;
+                            width: 45%;
                             flex-direction: column;
                             span{
                                 font-size: smaller;
@@ -119,6 +119,10 @@
                             h6{
                                 font-size: smaller;
                             }
+                        }
+                        .removeIcon{
+                            width: 10%;
+                            
                         }
                     }
                 }

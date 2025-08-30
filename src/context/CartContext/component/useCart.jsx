@@ -22,6 +22,8 @@ const useCart = () => {
     const logOutUser = () => {
         localStorage.removeItem("user")
         localStorage.removeItem("token")
+        localStorage.removeItem("cartItems")
+
         setIsLoggedIn(false)
         window.location.reload()
     }  

@@ -74,8 +74,7 @@ const handleSignUp = async (userData) => {
         setAuthState("Login")
       } else {
         alert(data.message || "An error occurred during registration")
-      }
-      
+      } 
     }
     catch(error){
       console.log(error);
@@ -106,11 +105,9 @@ const handleSignUp = async (userData) => {
         localStorage.setItem("user", JSON.stringify(data.user))
         // setRedirect(true)
         window.location.href = "/"
-        
       } else {
         alert(data.message || "An error occurred during registration")
       }
-      
     }
     catch(error){
       console.log(error);
