@@ -72,7 +72,7 @@ const Cart = () => {
                         </div>
                         <div className="right d-flex">
                         <div className="input-body d-flex gap-1 gap-md-3">
-                        <p>Quantity:</p>
+                        <p>Qty:</p>
                         <input
                             type="number"
                             min="1"
@@ -82,7 +82,7 @@ const Cart = () => {
                         />
                         </div> 
                         <div className="priceContainer d-flex align-items-center">
-                        <span>Total Price:</span>
+                        <span>Price:</span>
                         <h6 className='m-0 totalPrice'>
                             NGN 
                             {parseInt(item.quantity) * parseInt(item.price.replace(/,/g, ''))}

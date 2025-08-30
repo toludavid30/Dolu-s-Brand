@@ -105,12 +105,12 @@
                                 font-size: smaller;
                             }
                             .quantityContain{
-                            width: 30px;
-                            height: 25px;
+                            width: 28px;
+                            height: 23px;
                         }
                         }
                         .priceContainer{
-                            width: 45%;
+                            width: 50%;
                             flex-direction: column;
                             span{
                                 font-size: smaller;
