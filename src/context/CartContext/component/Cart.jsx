@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useCart from './useCart'
 import '../../styling/cart.css'
-import { set } from 'react-hook-form';
 
 const Cart = () => {
     const {cartProducts, retrieveCartItems, retrievedCart, setRetrievedCart, removeFromCart} = useCart()

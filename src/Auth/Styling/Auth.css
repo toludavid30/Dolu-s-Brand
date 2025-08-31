@@ -57,6 +57,12 @@
   p{
     font-size: smaller !important;
   }
+    .input-group-text, .input-group-addon {
+    background-color: #C54B8C;
+    color: black;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
 }
 
 @media (min-width:340px) and (max-width: 600px) {

@@ -24,6 +24,7 @@ const Auth = () => {
   const BaseUrl = "https://noderender-i690.onrender.com/auth"
   const [isLoading, setIsLoading] = useState(false)
   const [AuthState, setAuthState] = useState("Signup")
+  const [showPassword, setShowPassword] = useState(false)
   const [redirect, setRedirect] = useState(false)
   const {register, handleSubmit, formState:{errors}} = useForm(
     {
@@ -70,15 +71,37 @@ const handleSignUp = async (userData) => {
       console.log(data);
       if (data.status === 200) {
         setCurrentUser(data.user)
-        alert("Registration successful")
+        Swal.fire({
+                        title: 'Success',
+                        text: 'Registration successful',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        themeColor: '#000000',
+                        btnColor: '#7CFC00',
+                        btnColor: true
+                    });
+        // alert("Registration successful")
         setAuthState("Login")
       } else {
-        alert(data.message || "An error occurred during registration")
-      } 
+        // alert(data.message || "An error occurred during registration")
+        console.log("ERROR BLOCK", data);
+        Swal.fire({
+            title: 'Error',
+            text: data.message || "An error occurred during registration",
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
     }
+  }
     catch(error){
-      console.log(error);
-      
+      // console.log(error);
+        console.log("CATCH BLOCK", error);
+              Swal.fire({
+                  title: 'Error',
+                  text: error.message || "An error occurred during registration",
+                  icon: 'error',
+                  confirmButtonText: 'OK'
+              }); 
     }
     finally{
       setIsLoading(false)
@@ -100,22 +123,46 @@ const handleSignUp = async (userData) => {
       console.log(data);
       if (data.status === 200) {
         setCurrentUser(data.user)
-        alert("Sign In successful")
+        // alert("Sign In successful")
+        Swal.fire({
+                        title: 'Success',
+                        text: 'Sign In successful',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        themeColor: '#000000',
+                        btnColor: '#7CFC00',
+                        btnColor: true
+          });
         localStorage.setItem("token", JSON.stringify(data.token))
         localStorage.setItem("user", JSON.stringify(data.user))
         // setRedirect(true)
         window.location.href = "/"
       } else {
-        alert(data.message || "An error occurred during registration")
+        // alert(data.message || "An error occurred during registration")
+                Swal.fire({
+                    title: 'Error',
+                    text: data.message || "An error occurred during registration",
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
       }
     }
     catch(error){
-      console.log(error);
-      
+      // console.log(error);
+              Swal.fire({
+                  title: 'Error',
+                  text: error.message || "An error occurred during registration",
+                  icon: 'error',
+                  confirmButtonText: 'OK'
+              });      
     }
     finally{
       setIsLoading(false)
     }
+    }
+
+     const handlePassword = ()  => {
+        setShowPassword(prev => !prev)
     }
 
   //  useEffect(() => {
@@ -155,14 +202,29 @@ const handleSignUp = async (userData) => {
             </div>
             <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" {...register("Password")} className="form-control form-control-md" id="password" placeholder="Enter your password"/>
+                <div className="passwordContainer d-flex input-group">
+                <input type={showPassword ? "text" : "password"} {...register("Password")} className="form-control form-control-md" id="password" placeholder="Enter your password"/>
+                <span className='input-group-text' onClick={handlePassword}>
+                    {showPassword ? (
+                    <i class="fa-regular fa-eye-slash"></i> )
+                    : (<i class="fa-regular fa-eye"></i>) 
+                    }  
+                </span>
+                </div>
                 {errors.Password && 
                 <p className='text-danger'>{errors.Password.message}</p>
                 }
             </div>
             <div className="form-group">
                 <label htmlFor="password">Confirm Password</label>
-                <input type="password" className="form-control form-control-md" id="conPassword" onChange={confirmPassword} placeholder="Confirm your password"/>
+                <div className="passwordContainer d-flex input-group">
+                <input type={showPassword ? "text" : "password"} className="form-control form-control-md" id="conPassword" onChange={confirmPassword} placeholder="Confirm your password"/>
+                <span className='input-group-text' onClick={handlePassword}>
+                    {showPassword ? <i class="fa-regular fa-eye-slash"></i> 
+                    : <i class="fa-regular fa-eye"></i> 
+                    }  
+                </span>
+                </div>
             </div>
             <button type="submit" className="btn btn-primary btn-lg w-100"disabled = {isLoading}>Register</button>
         </form>
@@ -179,7 +241,14 @@ const handleSignUp = async (userData) => {
             </div>
             <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" {...register("Password")} className="form-control form-control-md" id="password" placeholder="Enter your password"/>
+                <div className="passwordContainer d-flex input-group">
+                <input type={showPassword ? "text" : "password"} {...register("Password")} className="form-control form-control-md" id="password" placeholder="Enter your password"/>
+                <span className='input-group-text' onClick={handlePassword}>
+                    {showPassword ? <i class="fa-regular fa-eye-slash"></i> 
+                    : <i class="fa-regular fa-eye"></i> 
+                    }  
+                </span>
+                </div>
             </div>
             <button type="submit" className="btn btn-primary btn-lg w-100" disabled = {isLoading}>Sign In</button>
         </form>
