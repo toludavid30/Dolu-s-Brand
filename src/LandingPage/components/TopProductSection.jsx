@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import useCart from '../../context/CartContext/component/useCart'
-import { href } from 'react-router-dom'
 
 const TopProductSection = () => {
     const {isLoggedIn, checkIsLoggedIn, addtoCart} = useCart()

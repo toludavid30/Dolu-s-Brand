@@ -1,6 +1,6 @@
 @media (min-width:500px) and (max-width: 700px) {
     .heroWrapper{
-        height: 75dvh;
+        height: 75vh;
         .heroPicContainer{
             position: absolute;
             height: 85%;
@@ -45,7 +45,7 @@
         }
     }
     #categorySection{
-        height: 60dvh;
+        height: 60vh;
         .categoryWrap{
             display: flex;
             flex-direction: column;
@@ -120,7 +120,7 @@
         .sectionWrapper{
                 /* height: 80%; */
                 .cardWrapper{
-                    height: 35dvh;
+                    height: 35vh;
                     display: flex;
                     flex-direction: column;
                     /* justify-content: space-between; */
@@ -146,7 +146,7 @@
 
   #ProductsSection{
     .cardWrapper{
-    height: 28dvh;
+    height: 28vh;
     width: 31%;
     img{
       height: 50%;
@@ -170,7 +170,7 @@
 
 @media (max-width: 500px) {
     .heroWrapper{
-        height: 80dvh;
+        height: 80vh;
         .heroPicContainer{
             position: absolute;
             height: 80%;
@@ -219,7 +219,7 @@
         }
     }
     #categorySection{
-        height: 60dvh;
+        height: 60vh;
         .categoryWrap{
             display: flex;
             flex-direction: column;
@@ -291,7 +291,7 @@
             height: 7%;
             }
         .sectionWrapper{                .cardWrapper{
-                    height: 30dvh;
+                    height: 30vh;
                     display: flex;
                     flex-direction: column;
                     /* justify-content: space-between; */
@@ -317,7 +317,7 @@
 
   #ProductsSection{
     .cardWrapper{
-    height: 30dvh;
+    height: 30vh;
     width: 30%;
     img{
       height: 50%;
@@ -340,7 +340,7 @@
 
 @media (min-width:700px) and (max-width: 1050px)  {
     .heroWrapper{
-        height: 75dvh;
+        height: 75vh;
         .heroPicContainer{
             position: absolute;
             height: 85%;
@@ -384,7 +384,7 @@
         }
     }
     #categorySection{
-        height: 60dvh;
+        height: 60vh;
         .categoryWrap{
             display: flex;
             flex-direction: column;
@@ -449,7 +449,7 @@
             height: 7%;
             }
         .sectionWrapper{
-                height: 40dvh;
+                height: 40vh;
                 .cardWrapper{
                     height: 92%;
                     display: flex;
@@ -467,7 +467,7 @@
 
   #ProductsSection{
     .cardWrapper{
-    height: 28dvh;
+    height: 28vh;
     width: 31%;
     img{
       height: 50%;

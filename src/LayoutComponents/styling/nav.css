@@ -5,7 +5,7 @@
 }
 #navbar{
     color: black;
-    height: 15dvh;
+    height: 15vh;
 
     #logoContainer{
         height: 90%;
@@ -43,25 +43,25 @@
     /* top: 10%; */
     width: 50%;
     height: auto;
-    max-height: 50dvh;
+    max-height: 50vh;
     margin: 0 auto;
     z-index: 100;
     overflow: auto;
     .itemWrap{
-        height: 20dvh;
+        height: 20vh;
         background-color: white;
         .itemWrapper{
             align-items: center;
             img{
-            height: 18dvh;
+            height: 18vh;
             width: 30%;
             object-fit: contain;
         }
             .itemInfo{
-                height: 18dvh;
+                height: 18vh;
             }
             .button{
-                height: 18dvh;
+                height: 18vh;
                 display: grid;
                 place-content: center;
             }
@@ -74,7 +74,7 @@
 
 @media (min-width: 700px) and (max-width: 1050px){
     #navbar{
-        height: 8dvh;
+        height: 8vh;
         #logoContainer{
             width: 32%;
             #logo{
@@ -100,16 +100,16 @@
     left: 14%;
     width: 75%;
     height: auto;
-    max-height: 40dvh;
+    max-height: 40vh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
     .itemWrap{
-        height: 12dvh;
+        height: 12vh;
         .itemWrapper{
             align-items: center;
             img{
-            height: 10dvh;
+            height: 10vh;
             width: 25%;
             object-fit: contain;
         }
@@ -121,7 +121,7 @@
                 
             }
             .button{
-                height: 18dvh;
+                height: 18vh;
                 display: grid;
                 place-content: center;
                 button{
@@ -136,7 +136,7 @@
 
 @media (min-width: 500px) and (max-width: 700px){
     #navbar{
-        height: 7dvh;
+        height: 7vh;
         #logoContainer{
             width: 32%;
             #logo{
@@ -156,16 +156,16 @@
     left: 14%;
     width: 75%;
     height: auto;
-    max-height: 40dvh;
+    max-height: 40vh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
     .itemWrap{
-        height: 12dvh;
+        height: 12vh;
         .itemWrapper{
             align-items: center;
             img{
-            height: 8dvh;
+            height: 8vh;
             width: 25%;
             object-fit: contain;
         }
@@ -190,7 +190,7 @@
 }
 @media (max-width: 500px){
     #navbar{
-        height: 7dvh;
+        height: 7vh;
         #logoContainer{
             width: 30%;
             #logo{
@@ -211,17 +211,17 @@
     left: 12%;
     width: 80%;
     height: auto;
-    max-height: 35dvh;
+    max-height: 35vh;
     margin: 0 auto;
     z-index: 10000;
     overflow: auto;
     .itemWrap{
-        height: 11dvh;
+        height: 11vh;
         .itemWrapper{
             align-items: center;
             /* justify-content: space-between !important; */
             img{
-            height: 8dvh;
+            height: 8vh;
             width: 25%;
             object-fit: contain;
         }
