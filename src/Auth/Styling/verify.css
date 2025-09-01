@@ -1,7 +1,7 @@
 .verifyWrapper{
     display: grid;
     place-content: center;
-    height: 70dvh;
+    height: 70vh;
 }
 
 .fingerprint-container {

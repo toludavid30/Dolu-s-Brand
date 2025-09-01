@@ -1,5 +1,5 @@
 #footer{
-    height: 70dvh;
+    height: 70vh;
     display: grid;
     place-content: center;
     .footerWrapper{
@@ -30,7 +30,7 @@
 
 @media (max-width: 600px){
 #footer{
-    height: 40dvh;
+    height: 40vh;
     .footerWrapper {
         .quickLinksWrap{
             width: 100%;
@@ -58,7 +58,7 @@
 }
 @media (min-width:600px) and (max-width: 900px){
 #footer{
-    height: 50dvh;
+    height: 50vh;
     .footerWrapper {
         .quickLinksWrap{
             width: 100%;
