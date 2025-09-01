@@ -6,15 +6,15 @@ const Herosection = () => {
 
     useEffect(() => {
         gsap.fromTo(".heroPicture1",{
-          duration: 2,
+          duration: 0,
           opacity: 0,
           x: -400,
           y: 180,
           scale: 0.5,
-          rotation: 180,
+          rotation: 360,
           ease: "power3.out",
         },{
-              duration: 4,
+              duration: 4.5,
               opacity: 1,
               x: 0,
               y: 60,
@@ -24,15 +24,15 @@ const Herosection = () => {
         })
 
         gsap.fromTo(".heroPicture2",{
-          duration: 2,
+          duration: 0,
           opacity: 0,
           x: 400,
           y: 180,
           scale: 0.5,
-          rotation: 150,
+          rotation: 360,
           ease: "power3.out",
         },{
-              duration: 4,
+              duration: 4.5,
               opacity: 1,
               x: 0,
               y: 60,
@@ -42,15 +42,15 @@ const Herosection = () => {
         })
 
         gsap.fromTo(".heroPicture3",{
-          duration: 2,
+          duration: 0,
           opacity: 0,
           x: -400,
           y: 180,
           scale: 0.5,
-          rotation: 150,
+          rotation: 360,
           ease: "power3.out",
         },{
-              duration: 4,
+              duration: 4.5,
               opacity: 1,
               x: 0,
               y: 65,
@@ -60,15 +60,15 @@ const Herosection = () => {
         })
 
         gsap.fromTo(".heroPicture4",{
-          duration: 2,
+          duration: 0,
           opacity: 0,
           x: 400,
           y: 180,
           scale: 0.5,
-          rotation: 150,
+          rotation: 360,
           ease: "power3.out",
         },{
-              duration: 4,
+              duration: 4.5,
               opacity: 1,
               x: 0,
               y: 65,
