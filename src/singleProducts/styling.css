@@ -4,7 +4,7 @@
     box-sizing: border-box;
     .wrap{
        .productImage{
-        height: 70dvh;
+        height: 70vh;
         width: 35dvw;
         img{
             height: 100%;
@@ -85,7 +85,7 @@
         .wrap{
             flex-direction: column;
        .productImage{
-        height: 55dvh;
+        height: 55vh;
         width: 95dvw;
         img{
             height: 100%;
@@ -130,7 +130,7 @@
     #productWrapper{
         .wrap{
        .productImage{
-        height: 40dvh;
+        height: 40vh;
         width: 50dvw;
         img{
             height: 100%;
