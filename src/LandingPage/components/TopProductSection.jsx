@@ -61,7 +61,7 @@ const TopProductSection = () => {
           },{
             duration: 2,
             opacity: 1,
-            y: 20,
+            y: 0,
         }, "first -=1")
         }, [])
   return (
