@@ -313,6 +313,8 @@
   font-family: Noto Sans Japanese, sans-serif;
   flex-direction: column;
   justify-content: space-evenly;
+  overflow-x: hidden;
+  overflow-y: hidden;
     .sectionTitle{
       height: 10%;
     }
