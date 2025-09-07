@@ -119,21 +119,10 @@ const Navbar = () => {
                                         </p>
                                     </div>
                                     <div className="button w-25">
-                                        <button className='btn btn-sm btn-dark' onClick={
-                                            isLoggedIn ?
-                                        ()=>addtoCart(`${elem.id}`)
-                                        :
-                                        () => {
-                                                    Swal.fire({
-                                                        title: 'Error',
-                                                        text: 'Kindly sign in to access this function',
-                                                        icon: 'info',
-                                                        confirmButtonText: 'OK'
-                                                    });
-                                        }
-                                            }>
-                                            Add to Cart
-                                        </button>
+                                        <a className='btn btn-sm btn-dark' href={`products/${elem.id}`}
+                                        >
+                                            Quick View
+                                        </a>
                                     </div>
                                 </div>
                             </div>

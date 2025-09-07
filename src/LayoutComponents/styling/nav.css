@@ -124,7 +124,7 @@
                 height: 18vh;
                 display: grid;
                 place-content: center;
-                button{
+                a{
                     font-size: x-small;
                 }
             }
@@ -179,7 +179,7 @@
             .button{
                 height: 100%;
                 margin: auto;
-                button{
+                a{
                     font-size: xx-small;
                 }
             }
@@ -235,7 +235,7 @@
             .button{
                 height: 100%;
                 margin: auto;
-                button{
+                a{
                     font-size: xx-small;
                 }
             }
