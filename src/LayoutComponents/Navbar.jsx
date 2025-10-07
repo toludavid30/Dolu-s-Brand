@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './styling/nav.css'
 import useCart from '../context/CartContext/component/useCart'
 
@@ -7,6 +7,7 @@ const Navbar = () => {
   const [cartFilled, setCartFilled] = useState(false)
   const [searchItems, setSearchItems] = useState([])
   const{isLoggedIn, logOutUser, checkIsLoggedIn, addtoCart} = useCart()
+  const navigate = useNavigate()
 
   
   useEffect(()=>{
@@ -119,10 +120,15 @@ const Navbar = () => {
                                         </p>
                                     </div>
                                     <div className="button w-25">
-                                        <a className='btn btn-sm btn-dark' href={`products/${elem.id}`}
+                                        <button className='btn btn-sm btn-dark' onClick={
+                                        () => {
+                                        setSearchItems([]);
+                                        navigate(`/products/${elem.id}`);
+                                        }
+                                        }
                                         >
                                             Quick View
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

@@ -10,7 +10,7 @@ const useCart = () => {
     const BaseUrl = "https://noderender-i690.onrender.com/auth"
     const BaseUrl2 = "https://noderender-i690.onrender.com/product"
     const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [retrievedCart, setRetrievedCart] = useState()
+    const [retrievedCart, setRetrievedCart] = useState( )
     const checkIsLoggedIn = () => {
         const currentUser = JSON.parse(localStorage.getItem("user"))
         const currentToken = JSON.parse(localStorage.getItem("token"))
