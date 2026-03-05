@@ -21,7 +21,7 @@ const Navbar = () => {
         return;
     }
     try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword: searchInput}),
                 headers:{

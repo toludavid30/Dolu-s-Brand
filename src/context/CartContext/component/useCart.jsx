@@ -6,9 +6,9 @@ import { Await } from 'react-router-dom'
 
 const useCart = () => {
     const {cartProducts, setCartProducts} = useContext(cartContext)
-    // const BaseUrl = "https://noderender-i690.onrender.com/auth"
-    const BaseUrl = "https://noderender-i690.onrender.com/auth"
-    const BaseUrl2 = "https://noderender-i690.onrender.com/product"
+    // const BaseUrl = `${import.meta.env.VITE_BASE_URL}/auth`
+    const BaseUrl = `${import.meta.env.VITE_BASE_URL}/auth`
+    const BaseUrl2 = `${import.meta.env.VITE_BASE_URL}/product"`
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [retrievedCart, setRetrievedCart] = useState( )
     const checkIsLoggedIn = () => {

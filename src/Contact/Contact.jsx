@@ -16,7 +16,7 @@ const Contact = () => {
     }
   )
   const [isLoading, setIsloading] = useState(false)
-  const baseUrl = "https://noderender-i690.onrender.com/auth/sendMessage"
+  const baseUrl = `${import.meta.env.VITE_BASE_URL}/auth/sendMessage`
   const sendMessage = async(message) => {
     setIsloading(true)
     try {

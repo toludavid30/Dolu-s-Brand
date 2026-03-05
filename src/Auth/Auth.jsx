@@ -21,7 +21,7 @@ const signinSchema = yup.object({
 
 
 const Auth = () => {
-  const BaseUrl = "https://noderender-i690.onrender.com/auth"
+  const BaseUrl = `${import.meta.env.VITE_BASE_URL}/auth`
   const [isLoading, setIsLoading] = useState(false)
   const [AuthState, setAuthState] = useState("Signup")
   const [showPassword, setShowPassword] = useState(false)

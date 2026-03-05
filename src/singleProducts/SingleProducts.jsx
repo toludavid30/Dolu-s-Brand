@@ -5,7 +5,7 @@ import Loader from '../LayoutComponents/Loader/Loader'
 import useCart from '../context/CartContext/component/useCart'
 
 const SingleProducts = () => {
-    const BaseUrl = "https://noderender-i690.onrender.com/product"
+    const BaseUrl = `${import.meta.env.VITE_BASE_URL}/product`
     const {productID} = useParams()
     // const {addtoCart} = useCart()
     const {isLoggedIn, checkIsLoggedIn, addtoCart} = useCart()

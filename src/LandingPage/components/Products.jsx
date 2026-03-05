@@ -19,7 +19,7 @@ const Products = () => {
         keyword = "Native wear"
         // setKeyword("Native")
         try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -39,7 +39,7 @@ const Products = () => {
         keyword = "Shirt"
         // setKeyword("Native")
         try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -57,7 +57,7 @@ const Products = () => {
     const getPantsProducts = async()=>{
         keyword = "Trousers, Corporate"
         try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -75,7 +75,7 @@ const Products = () => {
     const getCargoProducts = async()=>{
         keyword = "Cargo"
         try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -93,7 +93,7 @@ const Products = () => {
     const getToteProducts = async()=>{
         keyword = "Tote"
         try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{
@@ -112,7 +112,7 @@ const Products = () => {
         keyword = "Cross"
         setIsLoading(true)
         try {
-            const res = await fetch("https://noderender-i690.onrender.com/product/search", {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/product/search`, {
                 method: "POST",
                 body: JSON.stringify({keyword}),
                 headers:{

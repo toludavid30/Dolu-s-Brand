@@ -5,7 +5,7 @@ import "./Styling/verify.css"
 const Verify = () => {
     const [redirect, setRedirect] = useState(false)
     const {token} = useParams()
-    const baseUrl = "https://noderender-i690.onrender.com/auth/verify"
+    const baseUrl = `${import.meta.env.VITE_BASE_URL}/auth/verify`
 
     const handleVerify =async () =>{
         
