@@ -12,6 +12,9 @@ import Contact from './Contact/Contact';
 import Footer from './LayoutComponents/Footer';
 import Cart from './context/CartContext/component/Cart';
 import SingleProducts from './singleProducts/SingleProducts';
+import Checkout from './Checkout/Checkout';
+import PaymentSuccess from './Checkout/PaymentSuccess';
+import UserProtectedRoutes from './ProtectedRoutes/UserProtectedRoutes';
 
 
 const App = () => {
@@ -26,8 +29,15 @@ const App = () => {
       <Route path='/auth' element={<Auth/>}/>
       <Route path='/verify/:token' element={<Verify/>} />
       <Route path='/about' element={<About/>}/>
-      <Route path='/contact' element={<Contact/>}/> 
+      <Route element ={<UserProtectedRoutes/>}>
       <Route path='/cart' element={<Cart/>}/>
+      <Route path='/checkout' element={<Checkout/>}/>
+      <Route path='/payment-success' element={<PaymentSuccess/>}/>
+      </Route>
+      {/* <Route path='/payment-success' element={<PaymentSuccess/>}/> */}
+      <Route path='/contact' element={<Contact/>}/> 
+      {/* <Route path='/cart' element={<Cart/>}/> */}
+      {/* <Route path='/checkout' element={<Checkout/>}/> */}
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     <Footer/>
@@ -36,5 +46,7 @@ const App = () => {
     </>
   )
 }
+
+
 
 export default App

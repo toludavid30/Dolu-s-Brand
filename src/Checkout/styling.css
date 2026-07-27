@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .Text{
+        font-family: Noto Sans Japanese, sans-serif;
+    }
+}
+
+.formWrap { max-width: 760px; margin: 1rem 0 1.5rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 14px; background: #fff; box-shadow: 0 10px 28px rgba(17, 24, 39, .06); }
+.formIntro { display: flex; gap: .8rem; align-items: flex-start; margin-bottom: 1.4rem; }
+.formIntroIcon { display: grid; width: 2.25rem; height: 2.25rem; place-items: center; flex: 0 0 auto; border-radius: 50%; background: #1f2937; color: #fff; font-size: 1.25rem; }
+.formIntro h5, .formIntro p { margin: 0; }
+.formIntro h5 { color: #111827; font-weight: 700; }
+.formIntro p { margin-top: .2rem; color: #6b7280; font-size: .9rem; }
+.addressFormGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.addressField { display: flex; flex-direction: column; gap: .4rem; }
+.addressFieldWide { grid-column: 1 / -1; }
+.addressField label { color: #374151; font-size: .875rem; font-weight: 600; }
+.addressField label span:not(.optional) { color: #b91c1c; }
+.optional { color: #9ca3af; font-weight: 400; }
+.addressField input, .addressField textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; color: #111827; font: inherit; line-height: 1.4; padding: .7rem .8rem; transition: border-color .2s ease, box-shadow .2s ease; }
+.addressField textarea { resize: vertical; }
+.addressField input::placeholder, .addressField textarea::placeholder { color: #9ca3af; }
+.addressField input:focus, .addressField textarea:focus { outline: 0; border-color: #374151; box-shadow: 0 0 0 3px rgba(55, 65, 81, .13); }
+.addressFormError { margin: 1rem 0 0; color: #b91c1c; font-size: .9rem; font-weight: 600; }
+@media (max-width: 575px) { .formWrap { padding: 1.1rem; } .addressFormGrid { grid-template-columns: 1fr; } .addressFieldWide { grid-column: auto; } }

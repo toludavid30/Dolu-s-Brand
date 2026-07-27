@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useContext, useEffect, useState } from 'react'
 import useCart from './useCart'
 import '../../styling/cart.css'
+import { cartContext } from '../CartProvider'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
+    const navigate = useNavigate()
     const {cartProducts, retrieveCartItems, retrievedCart, setRetrievedCart, removeFromCart} = useCart()
     const [accTotal, setAccTotal] = useState()
     const [isLoading, setIsLoading] = useState(false)
@@ -39,6 +42,45 @@ const Cart = () => {
         });
         setAccTotal(total);
     }, [retrievedCart]);
+
+    const saveTotal = () => {
+        localStorage.setItem("cartTotal", JSON.stringify(accTotal))
+    };
+    const handleOrder = async() =>{
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/orders/create`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${JSON.parse(localStorage.getItem("token"))}`
+            },
+            body: JSON.stringify({
+                userId: currentUser?.id,
+                products: [...retrievedCart.map(item => ({productId: item.id, quantity: item.quantity}))],
+                amount: accTotal
+            })
+        });
+        const data = await res.json();
+        if(data.status === 201 || data.status === "success"){
+            localStorage.setItem("orderId", JSON.stringify(data.newOrder._id))
+            // console.log(data.newOrder._id);
+            alert("proceeding to checkout!")
+        }else{
+            alert(data.message || "Error placing order. Please try again.")
+        }
+    };
+
+    const proceedToCheckout = () => {
+        if (accTotal > 0) {
+            handleOrder();
+            saveTotal();
+            navigate('/checkout');
+            // window.location.href = "/checkout";
+        }
+    };
+
+    // useEffect(() => {
+    //     setCartTotal(accTotal)
+    // }, [accTotal])
     
 
   return (
@@ -49,7 +91,7 @@ const Cart = () => {
                     <img src="/vecteezy_user-profile-icon-symbol-vector-template_36744532.jpg" alt="" />
                 </div>
                 <div className="userName">
-                    <h5 className='text-center'>Welcome {currentUser?.name}</h5>
+                    <h5 className='text-center'>Welcome to your cart, {currentUser?.name}!</h5>
                 </div>
             </div>
             <div className="userCart w-100">
@@ -101,7 +143,7 @@ const Cart = () => {
                 {
                     retrievedCart && retrievedCart.length > 0 ? (
                         <div className='checkoutButton w-100 text-center py-4 py-md-5'>
-                            <div className="btn btn-large bg-dark text-light text-center py-2 px-4" onClick={
+                            {/* <div className="btn btn-large bg-dark text-light text-center py-2 px-4" onClick={
                                 () => {
                                     Swal.fire({
                                         title: 'Error',
@@ -109,6 +151,13 @@ const Cart = () => {
                                         icon: 'info',
                                         confirmButtonText: 'OK'
                                     });
+                                }
+                            }>
+                                Checkout NGN{accTotal}
+                            </div> */}
+                            <div className="btn btn-large bg-dark text-light text-center py-2 px-4" onClick={
+                                () => {
+                                    proceedToCheckout()
                                 }
                             }>
                                 Checkout NGN{accTotal}

@@ -44,7 +44,8 @@ const Contact = () => {
         <p>X @ <a href="https://x.com/dolu_co">dolu_co</a>
         </p>
         <p>
-          Email @ modolu77@gmail.com
+          Email us at:
+          <a href="mailto:modolu77@gmail.com"> modolu77@gmail.com</a>
         </p>
       </div>
       <div className='container cardWrapper w-md-50 py-4'>

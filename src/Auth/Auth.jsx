@@ -78,7 +78,6 @@ const handleSignUp = async (userData) => {
                         confirmButtonText: 'OK',
                         themeColor: '#000000',
                         btnColor: '#7CFC00',
-                        btnColor: true
                     });
         // alert("Registration successful")
         setAuthState("Login")
@@ -131,10 +130,19 @@ const handleSignUp = async (userData) => {
                         confirmButtonText: 'OK',
                         themeColor: '#000000',
                         btnColor: '#7CFC00',
-                        btnColor: true
           });
+        const userDetails = {
+          name: data.user.name,
+          email: data.user.Email,
+          id: data.user._id,
+          cartItems: data.user.cartItems
+        }
+
         localStorage.setItem("token", JSON.stringify(data.token))
-        localStorage.setItem("user", JSON.stringify(data.user))
+
+
+        localStorage.setItem("user", JSON.stringify(userDetails))
+
         // setRedirect(true)
         window.location.href = "/"
       } else {

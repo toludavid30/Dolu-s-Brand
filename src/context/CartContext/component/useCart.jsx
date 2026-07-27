@@ -8,23 +8,60 @@ const useCart = () => {
     const {cartProducts, setCartProducts} = useContext(cartContext)
     // const BaseUrl = `${import.meta.env.VITE_BASE_URL}/auth`
     const BaseUrl = `${import.meta.env.VITE_BASE_URL}/auth`
-    const BaseUrl2 = `${import.meta.env.VITE_BASE_URL}/product"`
+    const BaseUrl2 = `${import.meta.env.VITE_BASE_URL}/product`
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [retrievedCart, setRetrievedCart] = useState( )
-    const checkIsLoggedIn = () => {
+    const checkIsLoggedIn = async () => {
         const currentUser = JSON.parse(localStorage.getItem("user"))
         const currentToken = JSON.parse(localStorage.getItem("token"))
-        if(currentUser && currentToken){
+
+        const res = await fetch (`${BaseUrl}/checkauth`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${currentToken}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({token: currentToken})
+        })
+        const data = await res.json()
+
+        if(data.status === "success"){
             setIsLoggedIn(true)
-            // console.log(isLoggedIn);   
         }
+
+
+        // if(currentUser && currentToken){
+        //     setIsLoggedIn(true)
+        //     // console.log(isLoggedIn);   
+        // }
     }
-    const logOutUser = () => {
-        localStorage.removeItem("user")
-        localStorage.removeItem("token")
-        localStorage.removeItem("cartItems")
-        setIsLoggedIn(false)
-        window.location.reload()
+    const logOutUser = async () => {
+        const token = JSON.parse(localStorage.getItem("token"))
+
+        try {
+            const res = await fetch(`${BaseUrl}/logout`, {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({token})
+            })
+            const data = await res.json()
+            alert(data.message)
+        } catch (error) {
+            alert("Logout error:", error)
+        } finally {
+            localStorage.removeItem("user")
+            localStorage.removeItem("token")
+            localStorage.removeItem("cartItems")
+            localStorage.removeItem("cartTotal")
+            localStorage.removeItem("orderId")
+            localStorage.removeItem("deliveryAddress")
+            localStorage.removeItem("logististicsCost")
+            setIsLoggedIn(false)
+            window.location.reload()
+        }
     }  
     const addtoCart = async(productID, productColor, productSize, quantity) => {
         await setCartProducts((prev) => {
@@ -76,8 +113,8 @@ const useCart = () => {
                     }
                 })
                 const data = await res.json()
-                console.log(data);
-                console.log(cartPayload); 
+                // console.log(data);
+                // console.log(cartPayload); 
                 } catch (error) {
                     console.log(error);      
                 }
